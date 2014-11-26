@@ -7,8 +7,8 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	
 	routes: {
 		'': 'projectsIndex',
-		'projects/:id': 'projectShow',
 		'projects/new': 'projectNew',
+		'projects/:id': 'projectShow',
 	},
 	
 	projectsIndex: function () {
