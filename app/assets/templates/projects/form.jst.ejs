@@ -1,0 +1,18 @@
+<h2>Your dream starts here.</h2>
+
+<h3>To create a new ClickStarter campaign, please fill out the information below.</h4>
+	
+<label for='name'>Project Name</label><br>
+<input type='text' name='name' id='name' 
+value='<%= post.escape('name') %>'><br>
+
+<label for='description'>Please tell us about your project:</label><br>
+<textarea name='description' id='description'><%= post.escape('description') %></textarea><br>
+
+<label for='name'>What is your fundraising goal?</label><br>
+<input type='text' name='goal' id='goal' 
+value='$<%=post.escape('goal')%>'><br>
+
+<button>Submit</button>
+
+<a href='#/'>Back</a>
