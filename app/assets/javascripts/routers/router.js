@@ -2,7 +2,7 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	initialize: function () {
 		this.$rootEl = $('#main');
 		this.projects = new FinalProject.Collections.Projects();
-		new FinalProject.Views.Layout();
+		// new FinalProject.Views.Layout();
 	},
 	
 	routes: {
@@ -28,6 +28,7 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	},
 	
 	projectNew: function () {
+		debugger
 		var project = new FinalProject.Models.Project();
 		var formView = new FinalProject.Views.ProjectForm({
 			model: project

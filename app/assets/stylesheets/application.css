@@ -16,13 +16,12 @@
 
 #header {
 	background: lightgreen;
+	height: 50px;
 }
 
 #logo {
 	display: inline-block;
 }
-
-
 
 .session-control {
 	display: inline-block;
@@ -33,4 +32,9 @@
 #user-dropdown {
 	display: inline-block;
 	float: right;
+}
+
+html {
+	padding: 0px;
+	margin: 0px;
 }
