@@ -13,15 +13,18 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 	
 	createProject: function (event) {
 		event.preventDefault();
-		debugger
-	    var attrs = this.$el.serializeJSON();
+	    var attrs = $(event.target).serializeJSON();
 
 	    function success (project) {
 			var id = project.id
-	    	Backbone.history.navigate("projects/" + id, { trigger: true });
+			debugger
+	    	// Backbone.history.navigate("projects/" + id, { trigger: true });
+			Backbone.history.navigate('', {trigger: true});
 	    }
 
 	    this.model.set(attrs);
+		var id = this.model.id;
+		debugger
 	    if (this.model.isNew()) {
 	      	this.collection.create(this.model, {
 	        	success: success(this.model)

@@ -24,6 +24,12 @@ module Api
       end
     end
     
+    def destroy
+      @project = Project.find(params[:id])
+      @project.destroy if @project
+      render :json => {}
+    end
+    
     private
     def project_params
       params[:project].permit(:name, :description, :goal)
