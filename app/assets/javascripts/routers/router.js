@@ -28,10 +28,10 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	},
 	
 	projectNew: function () {
-		debugger
 		var project = new FinalProject.Models.Project();
 		var formView = new FinalProject.Views.ProjectForm({
-			model: project
+			model: project,
+			collection: this.projects
 		});
 		this._swapView(formView);
 	},

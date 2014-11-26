@@ -6,4 +6,30 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 		this.$el.html(content);
 		return this;
 	},
+	
+	events: {
+		'submit form': 'createProject'
+	},
+	
+	createProject: function (event) {
+		event.preventDefault();
+		debugger
+	    var attrs = this.$el.serializeJSON();
+
+	    function success (project) {
+			var id = project.id
+	    	Backbone.history.navigate("projects/" + id, { trigger: true });
+	    }
+
+	    this.model.set(attrs);
+	    if (this.model.isNew()) {
+	      	this.collection.create(this.model, {
+	        	success: success(this.model)
+	      	});
+	    } else {
+	      	this.model.save({}, {
+	        	success: success(this.model)
+	      	});
+	    }
+	},
 });
