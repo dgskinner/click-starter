@@ -1,0 +1,15 @@
+<li class='project-item'>
+  <a href='#/projects/<%= project.id %>'>
+    <span class='name'>        
+      <%= project.escape('name') %>
+    </span>
+  </a>
+    <span class='description'> 
+	  <% var desc = project.escape('description') %>  
+	  <% if (desc.length < 750) { %>     
+        <%= desc %>
+	  <% } else { %>
+		<%= desc.slice(0, 749) + "..."%>  
+	  <% } %>	
+    </span>
+</li>
