@@ -17,21 +17,17 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 
 	    function success (project) {
 			var id = project.id
-			debugger
-	    	// Backbone.history.navigate("projects/" + id, { trigger: true });
-			Backbone.history.navigate('', {trigger: true});
+	    	Backbone.history.navigate("projects/" + id, { trigger: true });
 	    }
 
 	    this.model.set(attrs);
-		var id = this.model.id;
-		debugger
 	    if (this.model.isNew()) {
 	      	this.collection.create(this.model, {
-	        	success: success(this.model)
+	        	success: success
 	      	});
 	    } else {
 	      	this.model.save({}, {
-	        	success: success(this.model)
+	        	success: success
 	      	});
 	    }
 	},
