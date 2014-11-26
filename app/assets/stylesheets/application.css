@@ -18,14 +18,17 @@
 	background: lightgreen;
 }
 
+#logo {
+	display: inline-block;
+}
+
+
+
 .session-control {
 	display: inline-block;
 	float: right;
 }
 
-#logo {
-	display: inline-block;
-}
 
 #user-dropdown {
 	display: inline-block;

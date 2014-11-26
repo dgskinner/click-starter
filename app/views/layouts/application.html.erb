@@ -7,26 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="header">
-	<div id="logo">ClickStarter
-	</div>
-	<% if logged_in? %>
-	  <!-- <%= current_user.email %> -->
-	  <div class="session-control" id="sign-out">
-	    <%= button_to "Sign Out", session_url, :method => :delete %>
-      </div>
-	  <div id="user-dropdown">
-	    Me
-	  </div>
-	<% else %>
-      <div class="session-control" id="sign-in">
-        <%= link_to "Sign In", new_session_url %>
-      </div>
-      <div class="session-control" id="sign-up">
-        <%= link_to "Sign Up", new_user_url %>
-      </div>
-	<% end %>
-  </div>
+
+<%= render partial: "layouts/header" %>
+  
 <%= yield %>
 
 </body>

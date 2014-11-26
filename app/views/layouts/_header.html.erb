@@ -1,0 +1,21 @@
+<div id="header">
+  <div id="logo">ClickStarter</div>
+  <span id="discover">Discover</span>
+	<% if logged_in? %>
+	  <!-- <%= current_user.email %> -->
+	  <span id="start">Start</span>
+	  <div class="session-control" id="sign-out">
+	    <%= button_to "Sign Out", session_url, :method => :delete %>
+      </div>
+	  <div id="user-dropdown">
+	    Me
+	  </div>
+	<% else %>
+      <div class="session-control" id="sign-in">
+        <%= link_to "Sign In", new_session_url %>
+      </div>
+      <div class="session-control" id="sign-up">
+        <%= link_to "Sign Up", new_user_url %>
+      </div>
+	<% end %>
+</div>
