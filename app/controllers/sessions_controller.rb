@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     )
     if user
       login(user)
-      redirect_to api_projects_url
+      redirect_to root_url
     else
       flash[:errors] = ["Invalid Username or Password"]
       render :new
@@ -18,6 +18,6 @@ class SessionsController < ApplicationController
   
   def destroy
     logout
-    redirect_to api_projects_url
+    redirect_to root_url
   end
 end

@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+#header {
+	background: lightgreen;
+}
+
+.session-control {
+	display: inline-block;
+	float: right;
+}
+
+#logo {
+	display: inline-block;
+}
+
+#user-dropdown {
+	display: inline-block;
+	float: right;
+}
