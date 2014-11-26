@@ -2,11 +2,13 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	initialize: function () {
 		this.$rootEl = $('#main');
 		this.projects = new FinalProject.Collections.Projects();
+		new FinalProject.Views.Layout();
 	},
 	
 	routes: {
 		'': 'projectsIndex',
-		'projects/:id': 'projectShow'
+		'projects/:id': 'projectShow',
+		'projects/new': 'projectNew',
 	},
 	
 	projectsIndex: function () {
@@ -23,6 +25,14 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 			model: project
 		});
 		this._swapView(showView);
+	},
+	
+	projectNew: function () {
+		var project = new FinalProject.Models.Project();
+		var formView = new FinalProject.Views.ProjectForm({
+			model: project
+		});
+		this._swapView(formView);
 	},
 	
 	_swapView: function (view) {

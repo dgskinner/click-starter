@@ -1,9 +1,9 @@
 <div id="header">
-  <div id="logo">ClickStarter</div>
-  <span id="discover">Discover</span>
+  <div id="logo"><a href="#">ClickStarter</a></div>
+  <span id="discover"><a href="#">Discover</a></span>
 	<% if logged_in? %>
 	  <!-- <%= current_user.email %> -->
-	  <span id="start">Start</span>
+	  <span id="start"><a href="#/projects/new">Start</a></span>
 	  <div class="session-control" id="sign-out">
 	    <%= button_to "Sign Out", session_url, :method => :delete %>
       </div>
