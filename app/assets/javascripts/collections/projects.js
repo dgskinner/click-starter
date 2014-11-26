@@ -1,4 +1,4 @@
-ClickStarter.Collections.Projects = Backbone.Collection.extend({
+FinalProject.Collections.Projects = Backbone.Collection.extend({
 
   model: .Models.Project
 

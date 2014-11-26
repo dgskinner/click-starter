@@ -1,4 +1,4 @@
-ClickStarter.Views.ProjectsIndex = Backbone.View.extend({
+FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 
   template: JST['projects/index']
 

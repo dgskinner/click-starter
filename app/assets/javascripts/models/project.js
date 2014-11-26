@@ -1,3 +1,3 @@
-ClickStarter.Models.Project = Backbone.Model.extend({
+FinalProject.Models.Project = Backbone.Model.extend({
 
 });
