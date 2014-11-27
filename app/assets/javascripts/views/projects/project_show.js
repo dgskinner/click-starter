@@ -10,4 +10,12 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		this.$el.html(content);
 		return this;
 	},
+	
+	events: {
+		'click button#donate': 'donateForm'
+	},
+	
+	donateForm: function () {
+		alert('SHOW DONATION FORM');
+	}
 });
