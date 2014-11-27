@@ -6,10 +6,10 @@
   </a>
     <span class='description'> 
 	  <% var desc = project.escape('description') %>  
-	  <% if (desc.length < 750) { %>     
+	  <% if (desc.length < 250) { %>     
         <%= desc %>
 	  <% } else { %>
-		<%= desc.slice(0, 749) + "..."%>  
+		<%= desc.slice(0, 249) + "..."%>  
 	  <% } %>	
     </span>
 </li>

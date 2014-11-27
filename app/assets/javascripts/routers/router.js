@@ -6,9 +6,14 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	},
 	
 	routes: {
-		'': 'projectsIndex',
+		'': 'welcome',
+		'projects': 'projectsIndex',
 		'projects/new': 'projectNew',
 		'projects/:id': 'projectShow',
+	},
+	
+	welcome: function () {
+		alert("WELCOME PAGE...")
 	},
 	
 	projectsIndex: function () {
