@@ -14,6 +14,7 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	
 	welcome: function () {
 		alert("WELCOME PAGE...")
+		
 	},
 	
 	projectsIndex: function () {
