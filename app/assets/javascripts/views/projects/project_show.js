@@ -16,7 +16,9 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	showDonationForm: function () {
-		var donateForm = new FinalProject.Views.DonationForm();
+		var donateForm = new FinalProject.Views.DonationForm({
+			model: this.model
+		});
 		this.$el.append(donateForm.render().$el);
 	}
 });

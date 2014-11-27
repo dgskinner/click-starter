@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   
   namespace :api, defaults: {format: :json} do
     resources :projects, except: [:edit, :update]
+    resources :donations, only: [:new, :create, :index]
   end
 end
