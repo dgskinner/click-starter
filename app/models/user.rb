@@ -21,6 +21,12 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many :projects
+  has_many :donations
+  has_many( 
+    :backed_projects, 
+    through: :donations, 
+    source: :project 
+  )
 
   def password=(password)
     @password = password

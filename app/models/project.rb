@@ -15,4 +15,10 @@ class Project < ActiveRecord::Base
   validates :name, :description, :goal, :user_id, presence: true
   
   belongs_to :user
+  has_many :donations
+  has_many(
+    :backers,
+    through: :donations,
+    source: :user
+  )
 end
