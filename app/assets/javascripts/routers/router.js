@@ -6,15 +6,15 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	},
 	
 	routes: {
-		'': 'welcome',
+		'': 'home',
 		'projects': 'projectsIndex',
 		'projects/new': 'projectNew',
 		'projects/:id': 'projectShow',
 	},
 	
-	welcome: function () {
-		alert("WELCOME PAGE...")
-		
+	home: function () {
+		var homeView = new FinalProject.Views.Home();
+		this._swapView(homeView);
 	},
 	
 	projectsIndex: function () {
