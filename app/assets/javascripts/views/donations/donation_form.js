@@ -39,6 +39,6 @@ FinalProject.Views.DonationForm = Backbone.View.extend({
 	},
 
 	cancelDonation: function () {
-		
+		this.$el.remove();
 	}
 });
