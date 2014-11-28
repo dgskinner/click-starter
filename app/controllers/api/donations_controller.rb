@@ -17,6 +17,11 @@ module Api
     end
   end
   
+  def index 
+    @donations = Donation.all
+    render :json => @donations
+  end
+  
   private
   def donation_params
     params[:donation].permit(:amount, :project_id)

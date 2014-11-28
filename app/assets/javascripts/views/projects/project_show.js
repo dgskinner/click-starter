@@ -11,11 +11,18 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 			daysLeft: this.daysLeft()
 		});
 		this.$el.html(content);
+		this.showRewards();
 		return this;
 	},
 	
 	events: {
 		'click button#donate': 'showDonationForm'
+	},
+	
+	showRewards: function () {
+		var rewardsIndex = new FinalProject.Views.RewardsIndex();
+		this.$el.append(rewardsIndex.render().$el);
+		debugger
 	},
 	
 	showDonationForm: function () {

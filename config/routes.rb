@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     resources :projects, except: [:edit, :update] do 
       resources :rewards, only: [:create, :index]
     end
-    resources :donations, only: [:create]
+    resources :donations, only: [:create, :index]
   end
 end
