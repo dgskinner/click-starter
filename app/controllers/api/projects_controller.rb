@@ -34,11 +34,5 @@ module Api
     def project_params
       params[:project].permit(:name, :description, :goal)
     end
-    
-    # def current_project
-    #   if params[:id]
-    #     @project = Project.find(params[:id])
-    #   end
-    # end
   end
 end
