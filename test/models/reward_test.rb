@@ -5,6 +5,7 @@
 #  id          :integer          not null, primary key
 #  min_pledge  :integer          not null
 #  description :text             not null
+#  project_id  :integer          not null
 #  created_at  :datetime
 #  updated_at  :datetime
 #

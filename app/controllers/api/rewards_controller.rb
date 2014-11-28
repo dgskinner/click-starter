@@ -9,7 +9,7 @@ class RewardsController < ApplicationController
   end
   
   def index
-    @rewards = Reward.where(prject_id: params[:project_id])
+    @rewards = Reward.where(project_id: params[:project_id])
   end
   
   private

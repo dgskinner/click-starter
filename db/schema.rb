@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20141128160959) do
   create_table "rewards", force: true do |t|
     t.integer  "min_pledge",  null: false
     t.text     "description", null: false
+    t.integer  "project_id",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
