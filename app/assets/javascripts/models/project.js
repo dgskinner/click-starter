@@ -2,12 +2,11 @@ FinalProject.Models.Project = Backbone.Model.extend({
 	urlRoot: '/api/projects',
 	
 	rewards: function (rewardsArray) {
-		// if (!this._rewards) {
+		// if (!this._rewards) { 	WILL NOT WORK WITH IF STATEMENT
 			this._rewards = new FinalProject.Collections.Rewards(rewardsArray, {
 				project: this
 			});
 		// }
-		debugger
 		return this._rewards;
 	},
 });

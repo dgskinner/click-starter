@@ -1,8 +1,7 @@
 FinalProject.Views.ProjectShow = Backbone.View.extend({
 	template: JST['projects/show'],
 	
-	initialize: function () {
-		this.listenTo(this.model, 'sync', this.render);
+	initialize: function () {		
 		this.rewards = this.model.rewards();
 		var that = this;
 		this.rewards.fetch({
@@ -13,7 +12,11 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 				that.rewards = that.model.rewards(coll);
 			}
 		});
+		
 		this.listenTo(this.rewards, 'sync', this.renderRewards);
+		this.listenTo(this.model, 'sync', this.render);
+		
+
 	},
 	
 	render: function () {
@@ -30,7 +33,6 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	renderRewards: function () {
-		debugger
 		var rewardsIndex = new FinalProject.Views.RewardsIndex({
 			collection: this.rewards
 		});
@@ -51,5 +53,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		deadline = this.model.get('deadline');
 		milliSec = new Date(deadline) - new Date(today);
 		return milliSec / 86400000;
-	}
+	},
+	
+	
 });
