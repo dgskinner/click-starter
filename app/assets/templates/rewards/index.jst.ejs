@@ -1,3 +1,6 @@
 <div id="rewards-index">
-  
+  <% rewards.each(function (reward) { %>
+	  <h2><%= reward.escape('min_pledge') %></h2>
+	  <h4><%= reward.escape('description') %></h4>
+  <% }); %>
 </div>

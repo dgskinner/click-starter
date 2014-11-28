@@ -3,6 +3,17 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	
 	initialize: function () {
 		this.listenTo(this.model, 'sync', this.render);
+		this.rewards = this.model.rewards();
+		var that = this;
+		this.rewards.fetch({
+			success: function () {
+				var coll = that.rewards.where({
+					project_id: that.model.id
+				});
+				that.rewards = that.model.rewards(coll);
+			}
+		});
+		this.listenTo(this.rewards, 'sync', this.renderRewards);
 	},
 	
 	render: function () {
@@ -11,7 +22,6 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 			daysLeft: this.daysLeft()
 		});
 		this.$el.html(content);
-		this.showRewards();
 		return this;
 	},
 	
@@ -19,8 +29,11 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		'click button#donate': 'showDonationForm'
 	},
 	
-	showRewards: function () {
-		var rewardsIndex = new FinalProject.Views.RewardsIndex();
+	renderRewards: function () {
+		debugger
+		var rewardsIndex = new FinalProject.Views.RewardsIndex({
+			collection: this.rewards
+		});
 		this.$el.append(rewardsIndex.render().$el);
 	},
 	
