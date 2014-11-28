@@ -21,6 +21,7 @@ FinalProject.Views.DonationForm = Backbone.View.extend({
 			project_id: projectId
 		});
 		donation.save();
+		this.$el.remove();
 		
 		// var attrs = $(event.target).serializeJSON();
 		// var donation = new FinalProject.Models.Donation(attrs);
