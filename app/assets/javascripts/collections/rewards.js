@@ -1,5 +1,5 @@
 FinalProject.Collections.Rewards = Backbone.Collection.extend({
-	url: '/api/projects/:project_id/rewards',
+	url: '/api/rewards',
 
 	model: FinalProject.Models.Reward,
 });

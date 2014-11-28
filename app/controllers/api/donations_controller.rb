@@ -15,15 +15,15 @@ module Api
         render :json => @donation.errors.full_messages, :status => 422
       end
     end
-  end
+
+    def index 
+      @donations = Donation.all
+      render :json => @donations
+    end
   
-  def index 
-    @donations = Donation.all
-    render :json => @donations
-  end
-  
-  private
-  def donation_params
-    params[:donation].permit(:amount, :project_id)
+    private
+    def donation_params
+      params[:donation].permit(:amount, :project_id)
+    end
   end
 end
