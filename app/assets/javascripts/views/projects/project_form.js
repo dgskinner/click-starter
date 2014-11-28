@@ -2,10 +2,9 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 	template: JST['projects/form'],
 	
 	render: function () {
-		debugger
 		var content = this.template({
 			project: this.model,
-			today: this.todaysDate
+			today: this.todaysDate()
 		});
 		this.$el.html(content);
 		return this;
@@ -37,18 +36,19 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 	},
 	
 	todaysDate: function () {
-		var today = new Date();
-		var dd = today.getDate();
-		var mm = today.getMonth() + 1;
-		var yyyy = today.getFullYear();
-
-		if (dd < 10) {
-		    dd = '0' + dd;
-		} 
-		if ( mm < 10) {
-		    mm = '0' + mm;
-		} 
-
-		return yyyy + '-' + mm + '-' + dd;
+		// var today = new Date();
+		// var dd = today.getDate();
+		// var mm = today.getMonth() + 1;
+		// var yyyy = today.getFullYear();
+		//
+		// if (dd < 10) {
+		//     dd = '0' + dd;
+		// }
+		// if ( mm < 10) {
+		//     mm = '0' + mm;
+		// }
+		//
+		// return yyyy + '-' + mm + '-' + dd;
+		return (new Date()).toJSON().slice(0, 10);
 	}
 });

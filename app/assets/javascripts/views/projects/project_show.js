@@ -6,7 +6,11 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	render: function () {
-		var content = this.template({project: this.model});
+		debugger
+		var content = this.template({
+			project: this.model,
+			daysLeft: this.daysLeft()
+		});
 		this.$el.html(content);
 		return this;
 	},
@@ -22,5 +26,12 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 			});
 			this.$el.append(donateForm.render().$el);
 		}
+	},
+	
+	daysLeft: function () {
+		today = new Date().toJSON().slice(0, 10);
+		deadline = this.model.get('deadline');
+		milliSec = new Date(deadline) - new Date(today);
+		return milliSec / 86400000;
 	}
 });
