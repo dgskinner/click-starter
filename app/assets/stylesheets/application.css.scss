@@ -14,27 +14,41 @@
  *= require_self
  */
 
-#header {
+@import "bootstrap";
+@import "font-awesome";
+
+
+.nav {
+	position: relative;
+	top: 0%;
 	background: lightgreen;
-	height: 50px;
+}
+
+.navbar-right {
+//	position: absolute;
+	right: 0%;
 }
 
 #logo {
+	position: relative;
+	display: inline-block;
+}
+
+#discover {
+	position: relative;
 	display: inline-block;
 }
 
 .session-control {
+	position: absolute;
 	display: inline-block;
 	float: right;
 }
 
 
-#user-dropdown {
+#dropdown {
+	position: absolute;
 	display: inline-block;
-	float: right;
+	right: 0%;
 }
 
-html {
-	padding: 0px;
-	margin: 0px;
-}

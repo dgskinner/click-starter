@@ -1,22 +1,66 @@
-<div id="header">
-  <div id="logo"><a href="#">ClickStarter</a></div>
-  <span id="discover"><a href="#/projects">Discover</a></span>
-	<% if logged_in? %>
+<!-- <div id="header"> -->
+  <!-- <div id="logo"><a href="#">ClickStarter</a></div> -->
+  <!-- <span id="discover"><a href="#/projects">Discover</a></span> -->
+	<!-- <% if logged_in? %> -->
 	  <!-- <%= current_user.email %> -->
-	  <span id="start"><a href="#/projects/new">Start</a></span>
-	  <div class="session-control" id="sign-out">
-	    <%= button_to "Sign Out", session_url, :method => :delete %>
-      </div>
-	  <div id="user-dropdown">
-	    Me
-	  </div>
+	  <!-- <span id="start"><a href="#/projects/new">Start</a></span> -->
+	  <!-- <div class="session-control" id="sign-out"> -->
+	    <!-- <%= button_to "Sign Out", session_url, :method => :delete %> -->
+      <!-- </div> -->
+	  <!-- <div id="user-dropdown"> -->
+	    <!-- Me -->
+	  <!-- </div> -->
+	  <!-- <li role="presentation" class="dropdown"> -->
+	    <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"> -->
+	      <!-- Me <span class="caret"></span> -->
+	    <!-- </a> -->
+	    <!-- <ul class="dropdown-menu" role="menu"> -->
+      
+	    <!-- </ul> -->
+	  <!-- </li> -->
+	<!-- <% else %> -->
+      <!-- <div class="session-control" id="sign-in"> -->
+        <!-- <%= link_to "Sign In", new_session_url %> -->
+      <!-- </div> -->
+      <!-- <div class="session-control" id="sign-up"> -->
+        <!-- <%= link_to "Sign Up", new_user_url %> -->
+      <!-- </div> -->
+	<!-- <% end %> -->
+	<!-- <%= render "layouts/errors" %> -->
+<!-- </div> -->
+
+<ul class="nav nav-pills">
+    <li id="logo"><a href="#">ClickStarter</a></li>
+    <li id="discover"><a href="#/projects">Discover</a></li>
+	
+	<% if logged_in? %>
+	
+	<li id="start"><a href="#/projects/new">Start</a></li>
+
+	<li role="presentation" class="dropdown pull-right">
+	  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"        aria-expanded="false">
+	    Dropdown <span class="caret"></span>
+	  </a>
+	  <ul class="dropdown-menu" role="menu">
+  	    <li id="sign-out">
+  	      <%= button_to "Sign Out", session_url, :method => :delete %>
+        </li>
+	  </ul>
+	</li>
+
+  
 	<% else %>
-      <div class="session-control" id="sign-in">
-        <%= link_to "Sign In", new_session_url %>
-      </div>
-      <div class="session-control" id="sign-up">
-        <%= link_to "Sign Up", new_user_url %>
-      </div>
+  
+  <li class="pull-right" id="sign-in">
+    <%= link_to "Sign In", new_session_url %>
+  </li>
+  <li class="pull-right" id="sign-up">
+    <%= link_to "Sign Up", new_user_url %>
+  </li>
+  
 	<% end %>
-	<%= render "layouts/errors" %>
-</div>
+	
+</ul>
+
+<%= render "layouts/errors" %>
+
