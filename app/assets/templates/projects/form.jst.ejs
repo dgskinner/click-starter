@@ -12,13 +12,13 @@
 
 	<label for='name'>What is your fundraising goal?</label><br>
 	<span id="dollar-sign">$</span>
-	<input type='text' name='goal' id='goal'
+	<input type='number' min='1' name='goal' id='goal'
 	value='<%=project.escape('goal')%>'><br>
 	
 	<label for='deadline'>Please set your fundraising deadline:</label><br>
-	<input type='date' name='deadline' id='deadline'><br>
+	<input type='date' min='<%= today %>' name='deadline' id='deadline'><br>
 
-	<input type="submit">
+	<input type='submit'>
 </form>
 
 <a href='#/'>Cancel</a>
