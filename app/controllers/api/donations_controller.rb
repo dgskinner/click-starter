@@ -6,8 +6,11 @@ module Api
     
     def create
       @donation = Donation.new(params[:donation].permit(:amount, :project_id))
-      # could set project_id here if wanted to nest donation routes inside of project routes
+      # ideally would set project_id here 
+      # then could create the donation through the project's donations assoc
+      # would have to nest donation routes inside of project routes?
       # @donation.project_id = params[:project_id]
+      
       @donation.user_id = current_user.id
       if @donation.save
         render :json => @donation

@@ -49,6 +49,7 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 		// }
 		//
 		// return yyyy + '-' + mm + '-' + dd;
+		
 		return (new Date()).toJSON().slice(0, 10);
 	}
 });
