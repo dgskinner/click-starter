@@ -14,9 +14,13 @@
  *= require_self
  */
 
-@import "bootstrap";
+//@import "bootstrap";
 // comment this out to use a theme
 
+
+body {
+	background: #F8F8F8;
+}
 
 .container {
 	position: relative;
@@ -127,5 +131,40 @@ input.submit {
 }
 
 
+// project show page
+
+.project-header {
+	display: block;
+	text-align: center;
+	padding-top:120px;
+	padding-bottom: 80px;
+	font-size: 400%;
+}
+
+#column-container {
+	position: relative;
+	background: white;
+	border: solid lightgray 1px;
+	border-radius: 5px;
+}
+
+.project-info {
+	display: inline-block;
+	padding: 30px;
+}
+
+.right {
+	width: 35%;
+	position: absolute;
+}
+
+.left {
+	width: 60%;
+}
+
+.project-image img{
+	display: inline-block;
+	width: 100%;
+}
 
 
