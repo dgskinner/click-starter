@@ -1,24 +1,42 @@
-<h2>Your dream starts here.</h2>
+<div class="title-text">
+	<div id="your-dream">Your dream starts here.</div>
 
-<h3>To create a new ClickStarter campaign, please fill out the information below.</h4>
+	<div id="to-create">Please fill out the information below to create a new project.</div>
+</div>
 
-<form>	
-	<label for='name'>Project Name:</label><br>
-	<input type='text' name='name' id='name'
-	value='<%=project.escape('name')%>'><br>
-
-	<label for='description'>Please tell us about your project:</label><br>
-	<textarea name='description' id='description'><%= project.escape('description') %></textarea><br>
-
-	<label for='name'>What is your fundraising goal?</label><br>
-	<span id="dollar-sign">$</span>
-	<input type='number' min='1' name='goal' id='goal'
-	value='<%=project.escape('goal')%>'><br>
+<form id="new-project">	
 	
-	<label for='deadline'>Please set your fundraising deadline:</label><br>
-	<input type='date' min='<%=today%>' name='deadline' id='deadline'><br>
+    <div class="form-group">
+		<label for='name'>Project Name:</label><br>
+		<input type='text' name='name' id='name'
+	value='<%=project.escape('name')%>'><br><br><br>
+    </div>
+	
+    <div class="form-group">
+		<label for='description'><span id="project-description">Please write a description about your project.</span> <span id="description-sub-label">What do you want potential supporters to know?</span></label><br>
+		
+		<textarea name='description' id='description'><%= project.escape('description') %></textarea><br><br><br>
+	</div>
 
-	<input type='submit'>
+  	<div class="form-group fundraising">
+		<div id="goal">
+		<label for='name'>What is your fundraising goal?</label><br>
+		<span id="dollar-sign">$</span>
+		<input type='number' min='1' name='goal' id='goal'
+	value='<%=project.escape('goal')%>'><br>
+		</div>
+	<!-- </div> -->
+	
+    <!-- <div class="form-group"> -->
+		<div id="deadline">
+		<label for='deadline'>Please set your fundraising deadline:</label><br>
+		<input type='date' min='<%=today%>' name='deadline' id='deadline'><br>
+		</div>
+	</div>
+
+  	<div class="form-group">
+		<input type='submit' id="submit-button" class="btn btn-default">
+	</div>
 </form>
 
-<a href='#/'>Cancel</a>
+<!-- <a href='#/'>Cancel</a> -->

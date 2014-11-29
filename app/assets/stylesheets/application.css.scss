@@ -15,11 +15,23 @@
  */
 
 @import "bootstrap";
-@import "font-awesome";
 
+
+.container {
+	position: relative;
+}
 
 .nav {
 	background: lightgreen;
+}
+
+.nav li a{
+    line-height: 70px;
+    height: 70px;
+	padding-top: 0px;
+	padding-right: 30px;
+	padding-left: 30px;
+	font-size: 125%;
 }
 
 #logo {
@@ -33,4 +45,77 @@
 .dropdown-menu {
 	width: 300px;
 }
+
+
+
+
+.title-text {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#your-dream {
+	padding-top: 120px;
+	font-size: 600%;
+}
+
+#to-create {
+	padding: 50px;
+	font-size: 150%;
+}
+
+#new-project {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	font-size: 150%;
+	text-align: left;
+}
+
+#new-project textarea {
+	height: 200px;
+	width: 100%;
+}
+
+#description-sub-label {
+	font-weight: normal;;
+}
+
+input#name {
+	width: 45%;
+}
+
+input#goal {
+	width: 170px;
+	height: 40px;
+}
+
+label {
+	padding-bottom: 10px;
+}
+
+.fundraising div {
+	display: inline-block;
+}
+
+.fundraising div#deadline {
+	position: absolute;
+	left: 50%;
+}
+
+#submit-button {
+	position: absolute;
+	display: block;
+	width: 140px;
+	height: 60px;
+	margin-top: 80px;
+	margin-bottom: 120px;
+	font-weight: bold;
+	font-size: 105%;
+	color: lightgreen;
+}
+
+
+
 
