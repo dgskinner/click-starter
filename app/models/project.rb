@@ -10,7 +10,8 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  deadline    :date
-
+#  image_url   :string(255)
+#
 
 class Project < ActiveRecord::Base
   validates :name, :description, :goal, :user_id, :deadline, presence: true

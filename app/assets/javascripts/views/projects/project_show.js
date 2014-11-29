@@ -19,6 +19,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	render: function () {
+		debugger
 		var content = this.template({
 			project: this.model,
 			daysLeft: this.daysLeft()

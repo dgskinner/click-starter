@@ -22,7 +22,6 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 	    function success (project) {
 			var id = project.id
 	    	Backbone.history.navigate("projects/" + id, { trigger: true });
-			
 	    }
 
 	    this.model.set(attrs);
