@@ -105,6 +105,10 @@ label {
 	left: 50%;
 }
 
+input.submit {
+	color: lightgreen;
+}
+
 #submit-project {
 	position: absolute;
 	display: block;
@@ -114,7 +118,6 @@ label {
 	margin-bottom: 120px;
 	font-weight: bold;
 	font-size: 105%;
-	color: lightgreen;
 }
 
 
