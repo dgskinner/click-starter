@@ -53,7 +53,8 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		var rewardsIndex = new FinalProject.Views.RewardsIndex({
 			collection: this.rewards
 		});
-		this.$el.append(rewardsIndex.render().$el);
+		var $rewardsIndex = this.$el.find('#rewards-index');
+		$rewardsIndex.append(rewardsIndex.render().$el);
 	},
 	
 	showDonationForm: function () {
