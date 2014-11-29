@@ -17,7 +17,8 @@ module Api
   
     private
     def reward_params
-      params[:reward].permit(:min_pledge, :description)
+      # ideally would not have to permit :project_id
+      params[:reward].permit(:min_pledge, :description, :project_id)
     end
   end
 end

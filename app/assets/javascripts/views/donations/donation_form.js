@@ -9,7 +9,7 @@ FinalProject.Views.DonationForm = Backbone.View.extend({
 	
 	events: {
 		'submit form': 'submitDonation',
-		'click button#cancel': 'cancelDonation'
+		'click button.cancel': 'cancelDonation'
 	},
 
 	submitDonation: function (event) {

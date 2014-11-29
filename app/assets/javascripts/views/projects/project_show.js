@@ -42,7 +42,9 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	
 	showRewardForm: function () {
 		if (this.$el.find('#reward-form').length === 0) {
-			var rewardForm = new FinalProject.Views.RewardForm();
+			var rewardForm = new FinalProject.Views.RewardForm({
+				model: this.model
+			});
 			this.$el.append(rewardForm.render().$el);
 		}
 	},
@@ -55,6 +57,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	showDonationForm: function () {
+		// if not the owner of this project...
 		if (this.$el.find('#donation-form').length === 0) {
 			var donateForm = new FinalProject.Views.DonationForm({
 				model: this.model
