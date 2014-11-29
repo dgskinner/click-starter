@@ -17,10 +17,12 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 	createProject: function (event) {
 		event.preventDefault();
 	    var attrs = $(event.target).serializeJSON();
-
+		
+		var that = this;
 	    function success (project) {
 			var id = project.id
 	    	Backbone.history.navigate("projects/" + id, { trigger: true });
+			
 	    }
 
 	    this.model.set(attrs);
@@ -36,20 +38,6 @@ FinalProject.Views.ProjectForm = Backbone.View.extend({
 	},
 	
 	todaysDate: function () {
-		// var today = new Date();
-		// var dd = today.getDate();
-		// var mm = today.getMonth() + 1;
-		// var yyyy = today.getFullYear();
-		//
-		// if (dd < 10) {
-		//     dd = '0' + dd;
-		// }
-		// if ( mm < 10) {
-		//     mm = '0' + mm;
-		// }
-		//
-		// return yyyy + '-' + mm + '-' + dd;
-		
 		return (new Date()).toJSON().slice(0, 10);
 	}
 });

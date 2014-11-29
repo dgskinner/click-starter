@@ -15,7 +15,6 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		
 		this.listenTo(this.rewards, 'sync', this.renderRewards);
 		this.listenTo(this.model, 'sync', this.render);
-		
 
 	},
 	
@@ -25,11 +24,27 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 			daysLeft: this.daysLeft()
 		});
 		this.$el.html(content);
+		this.renderAddRewardButton();
 		return this;
 	},
 	
 	events: {
-		'click button#donate': 'showDonationForm'
+		'click button#donate': 'showDonationForm',
+		'click button#add-reward': 'showRewardForm'
+	},
+	
+	
+	renderAddRewardButton: function () {
+		// if user is the owner of the project...
+		var addRewardButton = new FinalProject.Views.AddRewardButton();
+		this.$el.append(addRewardButton.render().$el);
+	},
+	
+	showRewardForm: function () {
+		if (this.$el.find('#reward-form').length === 0) {
+			var rewardForm = new FinalProject.Views.RewardForm();
+			this.$el.append(rewardForm.render().$el);
+		}
 	},
 	
 	renderRewards: function () {
