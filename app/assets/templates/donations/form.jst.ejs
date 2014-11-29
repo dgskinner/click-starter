@@ -1,11 +1,15 @@
-<div id="donation-form">
-	<h2>Donate</h2>
-
-	<form>	
-		<label for='amount'>How much would you like to donate?</label><br>
-		<input type='number' min='1' name='amount' id='amount'>
+<div id="donation-form">	
+	<span id="donate-title">Donate</span><br>
 	
-		<input type='submit' value='Donate!' class="btn btn-default">
-		<button id='cancel' class="btn btn-default">Cancel</button>
-	</form>
+    <div class="form-group">
+		<label for='amount'>How much would you like to donate?</label><br>
+		<span id="dollar-sign">$</span>
+		<input type='number' min='1' name='amount' id='amount'>
+	</div>
+	
+  	<div class="form-group">		
+		<input type='submit' value='Donate!' class="btn btn-default submit">
+		<button class="btn btn-default cancel">Cancel</button>
+	</div>
 </div>
+
