@@ -41,6 +41,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	showRewardForm: function () {
+		debugger
 		if (this.$el.find('#reward-form').length === 0) {
 			var rewardForm = new FinalProject.Views.RewardForm();
 			this.$el.append(rewardForm.render().$el);
