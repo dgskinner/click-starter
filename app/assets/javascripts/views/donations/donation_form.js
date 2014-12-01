@@ -1,8 +1,14 @@
 FinalProject.Views.DonationForm = Backbone.View.extend({
+	initialize: function (options) {
+		this.defaultAmount = options.amount;
+	},
+	
 	template: JST['donations/form'],
 	
 	render: function () {
-		var content = this.template();
+		var content = this.template({
+			defaultAmount: this.defaultAmount
+		});
 		this.$el.html(content);
 		return this;
 	},
@@ -39,7 +45,8 @@ FinalProject.Views.DonationForm = Backbone.View.extend({
 		// });
 	},
 
-	cancelDonation: function () {
+	cancelDonation: function (event) {
+		event.preventDefault();
 		this.$el.remove();
 	}
 });
