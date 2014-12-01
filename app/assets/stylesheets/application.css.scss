@@ -10,12 +10,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
+// might use this:  *= require slick
+
  *= require_tree .
  *= require_self
  */
 
-//@import "bootstrap";
+@import "bootstrap";
 // comment this out to use a theme
+//@import 'slick';
 
 
 body {
@@ -27,7 +31,7 @@ body {
 }
 
 .nav {
-	background: lightgreen;
+	background: white;
 }
 
 .nav li a{
@@ -52,6 +56,44 @@ body {
 }
 
 
+
+
+// home page
+
+//#welcome {
+//	display: block;
+//	padding: 120px;
+//	font-size: 500%;
+//	text-align: center;
+//}
+
+
+
+a.carousel-control {
+	width: 100px;
+}
+
+
+
+#discover-projects {
+	display: block;
+	font-size: 300%;
+	text-align: center;
+	padding-bottom: 400px;
+}
+
+
+
+
+// projects index
+
+#projects-index-title {
+	text-align: center;
+}
+
+#projects-index {
+    // I don't think the appropriate content is actually in this div
+}
 
 
 

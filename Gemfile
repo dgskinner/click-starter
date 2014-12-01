@@ -14,6 +14,8 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'newrelic_rpm'
 
+# might use this: gem "jquery-slick-rails"
+
 group :doc do
   gem 'sdoc', require: false
 end

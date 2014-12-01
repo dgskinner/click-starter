@@ -16,6 +16,9 @@
 //= require underscore
 //= require backbone
 //= require bootstrap
+	
+	// might use this: //= require jquery.slick
+	
 //= require final_project
 //= require_tree ../templates
 //= require_tree ./models

@@ -26,3 +26,22 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+
+
+    <div class="slick-carousel">
+        <div><img src="http://quantumleapalchemy.com/wp-content/uploads/2014/10/smaller.jpg" alt="Colorful drawing"></div>
+        <div><img src="http://foundry-wp.com/wp-content/uploads/2012/06/IMG_0050_small.jpg" alt="Pizza restaurant"></div>
+        <div><img src="http://inspiiral.com/wp-content/uploads/2014/11/women-in-technology.jpg" alt="Cool Technology"></div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migr"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slick-carousel').slick();
+        });
+    </script>
