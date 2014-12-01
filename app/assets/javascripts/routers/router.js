@@ -13,7 +13,6 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	},
 	
 	home: function () {
-		debugger
 		var homeView = new FinalProject.Views.Home();
 		// this._swapView(homeView);
 		if (this._currentView) {

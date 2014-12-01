@@ -30,6 +30,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	
 	events: {
 		'click button#donate': 'showDonationForm',
+		'click button#reward': 'showDonationForm',
 		'click button#add-reward': 'showRewardForm'
 	},
 	
