@@ -13,8 +13,14 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	},
 	
 	home: function () {
+		debugger
 		var homeView = new FinalProject.Views.Home();
-		this._swapView(homeView);
+		// this._swapView(homeView);
+		if (this._currentView) {
+			this._currentView.remove();
+		}
+		this._currentView = homeView;
+		$('body').append(homeView.render().$el);
 	},
 	
 	projectsIndex: function () {
@@ -44,7 +50,7 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 		this._swapView(formView);
 	},
 	
-	_swapView: function (view) {
+	_swapView: function (view, $el) {
 		if (this._currentView) {
 			this._currentView.remove();
 		}
