@@ -67,15 +67,13 @@ body {
 //	text-align: center;
 //}
 
-
+.carousel-inner .item {
+	height: 600px;
+}
 
 a.carousel-control {
 	width: 100px;
 }
-
-
-
-
 
 #discover-projects {
 	display: block;
@@ -216,4 +214,8 @@ input.submit {
 	width: 100%;
 }
 
+button#donate {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
 
