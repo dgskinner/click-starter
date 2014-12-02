@@ -11,12 +11,11 @@
 	    My Profile <span class="caret"></span>
 	  </a>
 	  <ul class="dropdown-menu" role="menu">
+		  
 		<li id="my-projects">
 			My Projects
 			<ul>
 				<% current_user.projects.each do |project| %>
-					<!-- <li>project 1</li> -->
-					<!-- <li>project 2</li> -->
 					<li>
 						<a href='#/projects/<%=project.id%>'>
 							<%= project.name %>
@@ -26,19 +25,27 @@
 			</ul>
 		</li>
 		</br>
+		
 		<li id="backed-projects">
 			Backed Projects
 			<ul>
-				<li>project 1</li>
-				<li>project 2</li>
-				<li>project 3</li>
+				<% current_user.backed_projects.each do |project| %>
+					<li>
+						<a href='#/projects/<%=project.id%>'>
+							<%= project.name %>
+						</a>
+					</li>
+				<% end %>
 			</ul>
 		</li>
 		<br>
+		
 		<li class="divider"></li>
+		
   	    <li id="sign-out">
   	      <%= button_to "Sign Out", session_url, :method => :delete %>
         </li>
+		
 	  </ul>
 	</li>
 
