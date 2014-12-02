@@ -23,7 +23,8 @@ class User < ActiveRecord::Base
   has_many :projects
   has_many :donations
   has_many( 
-    :backed_projects, 
+    :backed_projects,
+    -> { distinct }, 
     through: :donations, 
     source: :project 
   )

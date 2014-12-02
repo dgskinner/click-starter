@@ -2,7 +2,6 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	initialize: function () {
 		this.$rootEl = $('#main');
 		this.projects = new FinalProject.Collections.Projects();
-		// this.rewards = new FinalProject.Collections.Rewards();
 	},
 	
 	routes: {
@@ -31,11 +30,9 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	},
 	
 	projectShow: function (id) {
-		// this.rewards.fetch();
 		var project = this.projects.getOrFetch(id);
 		var showView = new FinalProject.Views.ProjectShow({
-			model: project,
-			// collection: this.rewards.where({project_id: id})
+			model: project
 		});
 		this._swapView(showView);
 	},

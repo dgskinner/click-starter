@@ -214,14 +214,16 @@ input.submit {
 }
 
 .right {
-	width: 30%;
-	position: absolute;
+	width: 29%;
+//	position: absolute;
 	padding-left: 0px;
+//	right: 0%;
 }
 
 .left {
 	width: 70%;
-	position: relative;
+//	position: absolute;
+//	top: 0%;
 }
 
 .project-image img{
