@@ -31,7 +31,7 @@ body {
 }
 
 .nav {
-	background: #33FF99;
+	background: lightgreen;
 }
 
 .nav li a{
@@ -214,7 +214,7 @@ input.submit {
 }
 
 .right {
-	width: 29%;
+	width: 29.5%;
 	padding-left: 0px;
 }
 
@@ -247,6 +247,24 @@ input.submit {
 	font-size: 300%	;
 }
 
+.progress {
+  width: 100%;
+  height: 15px;
+  border-radius: 0px;
+}
+.progress-wrap {
+  background: lightgreen;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  .progress-bar {
+    background: #F8F8F8;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
 #number-days {
 	font-size: 400%;
 	padding-top: 10px;
@@ -265,6 +283,7 @@ button#donate {
 button#reward {
 	width: 100%;
 }
+
 
 
 

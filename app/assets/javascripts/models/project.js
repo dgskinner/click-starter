@@ -16,7 +16,7 @@ FinalProject.Models.Project = Backbone.Model.extend({
 	      delete response.rewards;
 	    }
 		this.ownedByCurrentUser = response.is_owner;
-		
+		this.donationTotal = response.donation_total;
 		// why do we return this?
 		return response;
 	}
