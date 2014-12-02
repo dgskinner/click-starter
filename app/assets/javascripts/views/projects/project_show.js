@@ -5,7 +5,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		this.rewards = this.model.rewards();
 		this.$rewardsIndex = this.$el.find('#rewards-index');
 		
-		// would think this would render new reward right after creation...
+		// would think this would render new reward right after creation:
 		// this.listenTo(this.rewards, 'add', this.renderRewards);
 		this.listenTo(this.model, 'sync', this.render);
 	},
@@ -31,12 +31,10 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	renderEditButtons: function () {
-		var $leftColumn = this.$el.find('.project-info.left');
-		
 		var addRewardButton = new FinalProject.Views.AddRewardButton();
-		// $leftColumn.prepend(addRewardButton.render().$el);
-		
 		var editProjectLink = new FinalProject.Views.EditProjectLink();
+		
+		var $leftColumn = this.$el.find('.project-info.left');
 		$leftColumn.prepend(addRewardButton.render().$el);
 		$leftColumn.children().first().addClass('edit');
 		$leftColumn.prepend(editProjectLink.render().$el);
@@ -58,7 +56,6 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		});
 		var $rewardsIndex = this.$el.find('#rewards-index');
 		$rewardsIndex.append(rewardsIndex.render().$el);
-		// this.$rewardsIndex.append(rewardsIndex.render().$el);
 	},
 	
 	showDonationForm: function (event) {

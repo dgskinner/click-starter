@@ -103,6 +103,9 @@ a.carousel-control {
 
 
 
+
+// project form 
+
 .title-text {
 	display: block;
 	text-align: center;
@@ -134,6 +137,16 @@ a.carousel-control {
 
 #description-sub-label {
 	font-weight: normal;;
+}
+
+input {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+textarea {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 input#name {
@@ -231,7 +244,7 @@ input.submit {
 	
 }
 
-#goal {
+#donation-goal {
 	font-size: 300%	;
 }
 

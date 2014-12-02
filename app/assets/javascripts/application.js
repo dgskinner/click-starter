@@ -10,14 +10,14 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+	
 //= require jquery
 //= require jquery.serializeJSON
 //= require jquery_ujs
 //= require underscore
 //= require backbone
 //= require bootstrap
-	
-	// might use this: //= require jquery.slick
+//= require ckeditor/init
 	
 //= require final_project
 //= require_tree ../templates

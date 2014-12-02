@@ -14,8 +14,15 @@
 		<li id="my-projects">
 			My Projects
 			<ul>
-				<li>project 1</li>
-				<li>project 2</li>
+				<% current_user.projects.each do |project| %>
+					<!-- <li>project 1</li> -->
+					<!-- <li>project 2</li> -->
+					<li>
+						<a href='#/projects/<%=project.id%>'>
+							<%= project.name %>
+						</a>
+					</li>
+				<% end %>
 			</ul>
 		</li>
 		</br>
