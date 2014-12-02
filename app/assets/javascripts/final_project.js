@@ -9,6 +9,6 @@ window.FinalProject = {
 	}
 };
 
-$(document).ready(function(){
-	FinalProject.initialize();
-});
+// $(document).ready(function(){
+// 	FinalProject.initialize();
+// });

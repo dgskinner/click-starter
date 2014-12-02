@@ -3,7 +3,6 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	
 	initialize: function () {		
 		this.rewards = this.model.rewards();
-		// this.donations = this.model.donations();
 		
 		// would think this would render new reward right after creation:
 		// this.listenTo(this.rewards, 'add', this.renderRewards);

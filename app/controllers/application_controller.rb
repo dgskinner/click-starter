@@ -10,7 +10,9 @@ class ApplicationController < ActionController::Base
   end
   
   def is_owner?(project)
-    return true if project.user_id == current_user.id
+    if current_user
+      return true if project.user_id == current_user.id
+    end
     false
   end
   
