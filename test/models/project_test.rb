@@ -11,6 +11,7 @@
 #  updated_at  :datetime
 #  deadline    :date
 #  image_url   :string(255)
+#  category    :string(255)
 #
 
 require 'test_helper'
