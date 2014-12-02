@@ -34,7 +34,14 @@ module Api
     
     private
     def project_params
-      params[:project].permit(:name, :description, :goal, :deadline, :image_url)
+      params[:project].permit(
+        :name, 
+        :description, 
+        :goal, 
+        :deadline, 
+        :image_url,
+        :category
+      )
     end
   end
 end
