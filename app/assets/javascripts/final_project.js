@@ -9,6 +9,9 @@ window.FinalProject = {
 	}
 };
 
+
 // $(document).ready(function(){
 // 	FinalProject.initialize();
 // });
+
+// instead, called FinalProject.initialize in root.html.erb
