@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
-  helper_method :logged_in?, :current_user, :is_owner?
+  helper_method :logged_in?, :current_user, :is_owner?, :donation_total
   
   private
   
@@ -12,6 +12,14 @@ class ApplicationController < ActionController::Base
   def is_owner?(project)
     return true if project.user_id == current_user.id
     false
+  end
+  
+  def donation_total(project)
+    total = 0
+    project.donations.each do |donation|
+      total += donation.amount
+    end
+    total
   end
   
   def logged_in?

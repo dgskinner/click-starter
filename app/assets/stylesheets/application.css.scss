@@ -215,15 +215,12 @@ input.submit {
 
 .right {
 	width: 29%;
-//	position: absolute;
 	padding-left: 0px;
-//	right: 0%;
 }
 
 .left {
 	width: 70%;
-//	position: absolute;
-//	top: 0%;
+	vertical-align: top;
 }
 
 .project-image img{
