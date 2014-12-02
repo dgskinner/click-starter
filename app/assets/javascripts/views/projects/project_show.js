@@ -15,7 +15,6 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		
 		this.listenTo(this.rewards, 'sync', this.renderRewards);
 		this.listenTo(this.model, 'sync', this.render);
-
 	},
 	
 	render: function () {
@@ -72,6 +71,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	
 	daysLeft: function () {
 		today = new Date().toJSON().slice(0, 10);
+		debugger
 		deadline = this.model.get('deadline');
 		milliSec = new Date(deadline) - new Date(today);
 		return milliSec / 86400000;

@@ -15,8 +15,9 @@ module Api
     end
     
     def create
-      @project = Project.new(project_params)
-      @project.user_id = current_user.id
+      # @project = Project.new(project_params)
+      # @project.user_id = current_user.id
+      @project = current_user.projects.new(project_params)
       if @project.save
         render :json => @project
       else

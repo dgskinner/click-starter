@@ -9,4 +9,8 @@ FinalProject.Models.Project = Backbone.Model.extend({
 		// }
 		return this._rewards;
 	},
+	
+	is_owner: function () {
+		// if (this.user_id)
+	}
 });
