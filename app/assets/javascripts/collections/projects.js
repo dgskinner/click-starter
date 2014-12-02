@@ -3,6 +3,10 @@ FinalProject.Collections.Projects = Backbone.Collection.extend({
 
 	model: FinalProject.Models.Project,
 	
+    // initialize: function (models, options) {
+    //   this.user = options.user;
+    // },
+	
 	getOrFetch: function (id) {
 		var project = this.get(id);
 		var projects = this;

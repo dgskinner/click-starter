@@ -3,19 +3,18 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	
 	initialize: function () {		
 		this.rewards = this.model.rewards();
-		var that = this;
-		this.rewards.fetch({
-			success: function () {
-				var coll = that.rewards.where({
-					project_id: that.model.id
-				});
-				that.rewards = that.model.rewards(coll);
-			}
-		});
+		this.$rewardsIndex = this.$el.find('#rewards-index');
 		
-		this.listenTo(this.rewards, 'sync', this.renderRewards);
+		// would think this would render new reward right after creation...
+		// this.listenTo(this.rewards, 'add', this.renderRewards);
 		this.listenTo(this.model, 'sync', this.render);
 	},
+	
+	events: {
+		'click button#donate': 'showDonationForm',
+		'click button#reward': 'showDonationForm',
+		'click button#add-reward': 'showRewardForm'
+	},	
 	
 	render: function () {
 		var content = this.template({
@@ -23,22 +22,22 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 			daysLeft: this.daysLeft()
 		});
 		this.$el.html(content);
-		this.renderAddRewardButton();
+		
+		if (this.model.ownedByCurrentUser) {
+			this.renderEditButtons();
+		}
+		this.renderRewards();
 		return this;
 	},
 	
-	events: {
-		'click button#donate': 'showDonationForm',
-		'click button#reward': 'showDonationForm',
-		'click button#add-reward': 'showRewardForm'
-	},
-	
-	
-	renderAddRewardButton: function () {
-		if (this.model.ownedByCurrentUser) {
-			var addRewardButton = new FinalProject.Views.AddRewardButton();
-			this.$el.append(addRewardButton.render().$el);
-		}
+	renderEditButtons: function () {
+		var addRewardButton = new FinalProject.Views.AddRewardButton();
+		var $rewardsIndex = this.$el.find('#rewards-index');
+		$rewardsIndex.append(addRewardButton.render().$el);
+		// this.$rewardsIndex.append(addRewardButton.render().$el);
+		
+		var editProjectLink = new FinalProject.Views.EditProjectLink();
+		this.$el.append(editProjectLink.render().$el);
 	},
 	
 	showRewardForm: function () {
@@ -79,6 +78,4 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		milliSec = new Date(deadline) - new Date(today);
 		return milliSec / 86400000;
 	},
-	
-	
 });

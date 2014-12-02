@@ -1,9 +1,9 @@
 FinalProject.Models.Project = Backbone.Model.extend({
 	urlRoot: '/api/projects',
 	
-	rewards: function (rewardsArray) {
+	rewards: function () {
 		if (!this._rewards) { 	// Why do we need this if statement?
-			this._rewards = new FinalProject.Collections.Rewards(rewardsArray, {
+			this._rewards = new FinalProject.Collections.Rewards([], {
 				project: this
 			});
 		}
@@ -11,7 +11,7 @@ FinalProject.Models.Project = Backbone.Model.extend({
 	},
 	
 	parse: function (response) {
-	    if(response.rewards) {
+	    if (response.rewards) {
 	      this.rewards().set(response.rewards, { parse: true });
 	      delete response.rewards;
 	    }
