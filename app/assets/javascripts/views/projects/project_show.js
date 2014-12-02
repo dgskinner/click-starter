@@ -3,6 +3,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	
 	initialize: function () {		
 		this.rewards = this.model.rewards();
+		// this.donations = this.model.donations();
 		
 		// would think this would render new reward right after creation:
 		// this.listenTo(this.rewards, 'add', this.renderRewards);
@@ -18,7 +19,8 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	render: function () {
 		var content = this.template({
 			project: this.model,
-			daysLeft: this.daysLeft()
+			daysLeft: this.daysLeft(),
+			progressFraction: this.donationProgress()
 		});
 		this.$el.html(content);
 		
@@ -26,6 +28,9 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 			this.renderEditButtons();
 		}
 		this.renderRewards();
+		
+		window.moveProgressBar();
+		
 		return this;
 	},
 	
@@ -78,12 +83,12 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		milliSec = new Date(deadline) - new Date(today);
 		return milliSec / 86400000;
 	},
+	
+	donationProgress: function () {
+		return this.model.donationTotal / this.model.get('goal');
+	}
 });
 
-// on page load...
-$(document).ready(function(){
-    moveProgressBar();
-});
 
 // on browser resize...
 $(window).resize(function() {
@@ -92,8 +97,7 @@ $(window).resize(function() {
 
 // SIGNATURE PROGRESS
 function moveProgressBar() {
-  console.log("moveProgressBar");
-    var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
+    var getPercent = ($('.progress-wrap').data('progress-fraction'));
     var getProgressWrapWidth = $('.progress-wrap').width();
     var progressTotal = getPercent * getProgressWrapWidth;
     var animationLength = 1500;
