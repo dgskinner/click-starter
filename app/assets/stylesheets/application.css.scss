@@ -201,12 +201,14 @@ input.submit {
 }
 
 .right {
-	width: 35%;
+	width: 30%;
 	position: absolute;
+	padding-left: 0px;
 }
 
 .left {
-	width: 60%;
+	width: 70%;
+	position: relative;
 }
 
 .project-image img{
@@ -214,8 +216,43 @@ input.submit {
 	width: 100%;
 }
 
+
+.edit {
+	display: inline-block;
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+.edit .btn {
+	display: block;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#goal {
+	font-size: 300%	;
+}
+
+#number-days {
+	font-size: 400%;
+	padding-top: 10px;
+}
+
+#days-to-go {
+	font-size: 150%;
+	margin-top: -10px;
+}
+
 button#donate {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+
+button#reward {
+	width: 100%;
+}
+
+
 

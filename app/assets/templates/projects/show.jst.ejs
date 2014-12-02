@@ -16,7 +16,7 @@
 
 	<div class='project-info right'>
 	  <div id="goal">
-		  <h3>Goal: $<%=project.escape('goal')%></h3>
+		  Goal: $<%=project.escape('goal')%>
 	  </div>
 
 	  <!-- <div id="location"> -->
@@ -26,8 +26,8 @@
 
   
 	  <div id="deadline">
-		<div id="days-left"><%= daysLeft %></div>
-		  days to go  
+		<div id="number-days"><%= daysLeft %></div>
+		<div id="days-to-go">days to go</div>  
 	  </div> 
   
 	  <button id="donate" class="btn btn-default">Back This Project!</button>

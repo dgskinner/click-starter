@@ -31,13 +31,16 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	renderEditButtons: function () {
+		var $leftColumn = this.$el.find('.project-info.left');
+		
 		var addRewardButton = new FinalProject.Views.AddRewardButton();
-		var $rewardsIndex = this.$el.find('#rewards-index');
-		$rewardsIndex.append(addRewardButton.render().$el);
-		// this.$rewardsIndex.append(addRewardButton.render().$el);
+		// $leftColumn.prepend(addRewardButton.render().$el);
 		
 		var editProjectLink = new FinalProject.Views.EditProjectLink();
-		this.$el.append(editProjectLink.render().$el);
+		$leftColumn.prepend(addRewardButton.render().$el);
+		$leftColumn.children().first().addClass('edit');
+		$leftColumn.prepend(editProjectLink.render().$el);
+		$leftColumn.children().first().addClass('edit');
 	},
 	
 	showRewardForm: function () {
@@ -55,6 +58,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		});
 		var $rewardsIndex = this.$el.find('#rewards-index');
 		$rewardsIndex.append(rewardsIndex.render().$el);
+		// this.$rewardsIndex.append(rewardsIndex.render().$el);
 	},
 	
 	showDonationForm: function (event) {
