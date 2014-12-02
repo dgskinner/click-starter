@@ -7,7 +7,8 @@ module Api
     
     def show
       @project = Project.find(params[:id])
-      render json: @project
+      # render json: @project
+      render :show
     end
     
     def new 

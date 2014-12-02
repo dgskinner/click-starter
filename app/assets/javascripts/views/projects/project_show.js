@@ -35,9 +35,10 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	
 	
 	renderAddRewardButton: function () {
-		// if user is the owner of the project...
-		var addRewardButton = new FinalProject.Views.AddRewardButton();
-		this.$el.append(addRewardButton.render().$el);
+		if (this.model.ownedByCurrentUser) {
+			var addRewardButton = new FinalProject.Views.AddRewardButton();
+			this.$el.append(addRewardButton.render().$el);
+		}
 	},
 	
 	showRewardForm: function () {
@@ -58,20 +59,22 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	showDonationForm: function (event) {
-		// if not the owner of this project...
-		var amount = $(event.currentTarget).find('h2').text();
-		if (this.$el.find('#donation-form').length === 0) {
-			var donateForm = new FinalProject.Views.DonationForm({
-				model: this.model,
-				amount: amount
-			});
-			this.$el.append(donateForm.render().$el);
-		}
+		if (this.model.ownedByCurrentUser) {
+			// tell user why nothing happened
+		} else {
+			var amount = $(event.currentTarget).find('h2').text();
+			if (this.$el.find('#donation-form').length === 0) {
+				var donateForm = new FinalProject.Views.DonationForm({
+					model: this.model,
+					amount: amount
+				});
+				this.$el.append(donateForm.render().$el);
+			}
+		}	
 	},
 	
 	daysLeft: function () {
 		today = new Date().toJSON().slice(0, 10);
-		debugger
 		deadline = this.model.get('deadline');
 		milliSec = new Date(deadline) - new Date(today);
 		return milliSec / 86400000;

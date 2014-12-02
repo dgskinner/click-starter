@@ -1,12 +1,17 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
-  helper_method :logged_in?, :current_user
+  helper_method :logged_in?, :current_user, :is_owner?
   
   private
   
   def current_user
     @current_user ||= User.find_by_session_token(session[:session_token])
+  end
+  
+  def is_owner?(project)
+    return true if project.user_id == current_user.id
+    false
   end
   
   def logged_in?
