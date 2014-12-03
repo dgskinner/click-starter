@@ -2,7 +2,7 @@ FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 	template: JST['projects/index'],
 	
 	initialize: function () {
-		this.listenTo(this.collection, 
+		this.listenTo(this.collection,
 			'add change:title change:description remove reset', this.render);
 	},
 	
