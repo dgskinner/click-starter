@@ -3,7 +3,6 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 
 	initialize: function (options) {
 		this.category = options.category;
-		// this.projectsInCat = this.collection
 		this.listenTo(this.collection,
 			'add change:title change:description remove reset', this.render);
 	},

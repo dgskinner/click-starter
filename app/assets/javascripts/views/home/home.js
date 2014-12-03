@@ -10,6 +10,7 @@ FinalProject.Views.Home = Backbone.View.extend({
 	events: {
 		'click .carousel-control.left': 'prev',
 		'click .carousel-control.right': 'next',
+		'click .category.btn': 'showCategoryPage'
 	},
 	
 	prev: function () {
@@ -18,5 +19,12 @@ FinalProject.Views.Home = Backbone.View.extend({
 	
 	next: function () {
 		$('#carousel').carousel('next');
+	},
+	
+	showCategoryPage: function (event) {
+		var cat = $(event.currentTarget).data('cat');
+		Backbone.history.navigate(
+			'#/projects/categories/' + cat
+		);
 	}
 });

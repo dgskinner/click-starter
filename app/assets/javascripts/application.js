@@ -17,8 +17,6 @@
 //= require underscore
 //= require backbone
 //= require bootstrap
-//= require ckeditor/init
-	
 //= require final_project
 //= require_tree ../templates
 //= require_tree ./models
