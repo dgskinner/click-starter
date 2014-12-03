@@ -21,4 +21,12 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 		});
 		return this;
 	},
+	
+	events: {
+		'click .project-item': 'showProject' 
+	},
+	
+	showProject: function (event) {
+		debugger
+	}
 });

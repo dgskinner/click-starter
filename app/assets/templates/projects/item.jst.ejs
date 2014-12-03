@@ -21,11 +21,12 @@
 	
 	<div class="info-under-progress-bar">
 		<div class="percent-funded">
-			<h4>78%</h4>
+			<% var frac = project.donationTotal / project.escape('goal') %>
+			<h4><%=Math.floor(frac * 100)%>%</h4>
 			<h6>funded</h6>
 		</div>
 		<div class="donation-goal">
-			<h4>$200</h4>
+			<h4>$<%=project.escape('goal')%></h4>
 			<h6>goal</h6>
 		</div>
 		<div class="days-to-go">
