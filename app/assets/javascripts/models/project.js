@@ -11,7 +11,6 @@ FinalProject.Models.Project = Backbone.Model.extend({
 	},
 	
 	parse: function (response) {
-		debugger
 	    if (response.rewards) {
 	      this.rewards().set(response.rewards, { parse: true });
 	      delete response.rewards;

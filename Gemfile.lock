@@ -52,13 +52,6 @@ GEM
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.1.4)
-    ckeditor (4.1.1)
-      cocaine
-      orm_adapter (~> 0.5.0)
-    climate_control (0.0.3)
-      activesupport (>= 3.0)
-    cocaine (0.5.4)
-      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -97,7 +90,6 @@ GEM
     minitest (4.7.5)
     multi_json (1.10.1)
     newrelic_rpm (3.9.7.266)
-    orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
     pry (0.10.1)
@@ -167,7 +159,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
-  ckeditor
   coffee-rails (~> 4.0.0)
   font-awesome-rails
   jbuilder (~> 1.2)

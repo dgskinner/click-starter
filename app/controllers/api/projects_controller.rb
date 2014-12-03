@@ -1,6 +1,7 @@
 module Api
   class ProjectsController < ApiController
     def index
+      # might not actually want all here...
       @projects = Project.all
       render :index
     end

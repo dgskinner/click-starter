@@ -6,7 +6,6 @@ FinalProject.Views.ProjectsIndexItem = Backbone.View.extend({
 	},
 
 	render: function () {
-		debugger
 		var content = this.template({project: this.model});
 		this.$el.html(content).addClass('project-item');
 		window.moveProgressBar();
