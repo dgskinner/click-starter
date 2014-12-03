@@ -9,6 +9,7 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 		'projects': 'projectsIndex',
 		'projects/new': 'projectNew',
 		'projects/:id': 'projectShow',
+		'projects/categories/:cat': 'projectCat'
 	},
 	
 	home: function () {
@@ -44,6 +45,15 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 			collection: this.projects
 		});
 		this._swapView(formView);
+	},
+	
+	projectCat: function (cat) {
+		this.projects.fetch();
+		var categoryView = new FinalProject.Views.ProjectsCategory({
+			collection: this.projects,
+			category: cat
+		});
+		this._swapView(categoryView);
 	},
 	
 	_swapView: function (view, $el) {
