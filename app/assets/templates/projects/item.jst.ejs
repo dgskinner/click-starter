@@ -1,15 +1,36 @@
-<li class='project-item'>
-  <a href='#/projects/<%= project.id %>'>
-    <span class='name'>        
-      <%= project.escape('name') %>
-    </span>
-  </a>
-    <span class='description'> 
+<img src='<%=project.escape("image_url")%>'>
+
+<div class="index-project-info">
+	<!-- <a href='#/projects/<%= project.id %>'> -->
+	  <div class='project-name'>        
+	    <%= project.escape('name') %>
+	  </div>
+	<!-- </a> -->
+	<div class='project-description'> 
 	  <% var desc = project.escape('description') %>  
 	  <% if (desc.length < 250) { %>     
-        <%= desc %>
+	    <%= desc %>
 	  <% } else { %>
 		<%= desc.slice(0, 249) + "..."%>  
 	  <% } %>	
-    </span>
-</li>
+	</div>
+	
+	<div class="progress-wrap progress index" data-progress-fraction=".78">
+	  <div class="progress-bar progress index"></div>
+	</div>
+	
+	<div class="info-under-progress-bar">
+		<div class="percent-funded">
+			<h4>78%</h4>
+			<h6>funded</h6>
+		</div>
+		<div class="donation-goal">
+			<h4>$200</h4>
+			<h6>goal</h6>
+		</div>
+		<div class="days-to-go">
+			<h4>9</h4>
+			<h6>days to go</h6>
+		</div>
+	</div>
+</div>
