@@ -17,7 +17,7 @@
  *= require_self
  */
 
-@import "bootstrap";
+//@import "bootstrap";
 // comment this out to use a theme
 //@import 'slick';
 
@@ -75,17 +75,43 @@ a.carousel-control {
 	width: 100px;
 }
 
-#discover-projects {
-	display: block;
-	font-size: 300%;
-	text-align: center;
-	padding: 200px;
-}
+//#discover-projects {
+//	display: block;
+//	font-size: 300%;
+//	text-align: center;
+//	padding: 200px;
+//}
 
 .carousel-caption {
 	font-size: 250%;
 	padding-bottom: 100px;
 }
+
+#explore-categories {
+	display: block;
+	font-size: 300%;
+	text-align: center;
+	padding: 100px;
+}
+
+.categories {
+	position: relative;
+	height: 150px;
+}
+
+.categories.second-row {
+	margin-bottom: 150px;
+}
+
+.category {
+	width: 20%;
+	margin-left: 10%;
+	height: 70%;
+	border-radius: 10px;
+}
+
+
+
 
 
 

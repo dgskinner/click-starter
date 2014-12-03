@@ -5,7 +5,8 @@ json.extract!( @project,
 	:goal, 
 	:user_id, 
 	:deadline, 
-	:image_url
+	:image_url,
+	:category
 )
 
 json.is_owner is_owner?(@project)
