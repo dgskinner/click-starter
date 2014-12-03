@@ -96,7 +96,7 @@ a.carousel-control {
 
 .categories {
 	position: relative;
-	height: 150px;
+	height: 200px;
 }
 
 .categories.second-row {
@@ -106,11 +106,18 @@ a.carousel-control {
 .category {
 	width: 20%;
 	margin-left: 10%;
-	height: 70%;
+	height: 60%;
 	border-radius: 10px;
 }
 
+.category > h3 {
+	vertical-align: center;
+	transform: translateY(50%);
+}
 
+#bottom-left {
+	margin-left: 25%;
+}
 
 
 
