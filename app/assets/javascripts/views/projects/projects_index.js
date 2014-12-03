@@ -23,21 +23,4 @@ FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 	},
 });
 
-// on browser resize...
-$(window).resize(function() {
-    moveProgressBar();
-});
 
-// SIGNATURE PROGRESS
-function moveProgressBar() {
-    var getPercent = ($('.progress-wrap').data('progress-fraction'));
-    var getProgressWrapWidth = $('.progress-wrap').width();
-    var progressTotal = getPercent * getProgressWrapWidth;
-    var animationLength = 1500;
-    
-    // on page load, animate percentage bar to data percentage length
-    // .stop() used to prevent animation queueing
-    $('.progress-bar').stop().animate({
-        left: progressTotal
-    }, animationLength);
-}

@@ -15,13 +15,14 @@
 	  <% } %>	
 	</div>
 	
-	<div class="progress-wrap progress index" data-progress-fraction=".78">
+	<% var frac = project.donationTotal / project.escape('goal') %>
+	
+	<div class="progress-wrap progress index" data-progress-fraction="<%=frac%>">
 	  <div class="progress-bar progress index"></div>
 	</div>
 	
 	<div class="info-under-progress-bar">
 		<div class="percent-funded">
-			<% var frac = project.donationTotal / project.escape('goal') %>
 			<h4><%=Math.floor(frac * 100)%>%</h4>
 			<h6>funded</h6>
 		</div>
