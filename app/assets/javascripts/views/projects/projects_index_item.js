@@ -6,10 +6,20 @@ FinalProject.Views.ProjectsIndexItem = Backbone.View.extend({
 	},
 
 	render: function () {
-		var content = this.template({project: this.model});
+		var content = this.template({
+			project: this.model,
+			daysLeft: this.daysLeft()
+		});
 		this.$el.html(content).addClass('project-item');
 		window.moveProgressBar();
 		return this;
+	},
+	
+	daysLeft: function () {
+		today = new Date().toJSON().slice(0, 10);
+		deadline = this.model.get('deadline');
+		milliSec = new Date(deadline) - new Date(today);
+		return milliSec / 86400000;
 	},
 });
 
