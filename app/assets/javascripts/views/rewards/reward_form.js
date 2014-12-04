@@ -20,8 +20,7 @@ FinalProject.Views.RewardForm = Backbone.View.extend({
 		reward.set({project_id: projectId});
 		reward.save();
 		this.$el.remove();
-		// want to re-render the show page to see updated rewards list
-		// couldn't make this work using Backbone.history.navigate
+		Backbone.history.navigate('#/projects/' + projectId, { trigger: true });
 	},
 
 	cancelReward: function () {

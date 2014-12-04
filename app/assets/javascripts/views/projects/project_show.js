@@ -65,6 +65,7 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	showDonationForm: function (event) {
+		// $('body').addClass('form-showing');
 		if (this.model.ownedByCurrentUser) {
 			// tell user why nothing happened
 		} else {

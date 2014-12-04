@@ -26,6 +26,10 @@ body {
 	font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+//body.form-showing {
+//	opacity: 0.2;
+//}
+
 .container {
 	position: relative;
 }
@@ -521,6 +525,33 @@ button#reward:hover {
 	}
 }
 
+
+// donation form
+
+#donation-form {
+	position: fixed;
+	font-size: 200%;
+//	padding: 1000px;
+	padding-top: 200px;
+//	width: 100%;
+//	height: 100%;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color: rgba(248,248,248,0.9);
+	#donate-title {
+		font-size: 300%;
+	}
+	input#amount {
+		width: 58%;
+	}
+	.btn {
+		margin-top: 20px;
+		margin-right: 25px;
+		margin-left: 10px;
+		font-size: 100%;
+	}
+}
 
 
 
