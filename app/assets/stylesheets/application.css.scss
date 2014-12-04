@@ -65,13 +65,6 @@ body {
 
 // home page
 
-//#welcome {
-//	display: block;
-//	padding: 120px;
-//	font-size: 500%;
-//	text-align: center;
-//}
-
 .carousel-inner .item {
 	width: 100%;
 }
@@ -79,13 +72,6 @@ body {
 a.carousel-control {
 	width: 100px;
 }
-
-//#discover-projects {
-//	display: block;
-//	font-size: 300%;
-//	text-align: center;
-//	padding: 200px;
-//}
 
 .carousel-caption {
 	font-size: 250%;
@@ -124,8 +110,24 @@ a.carousel-control {
 	color: lightgray;
 }
 
-.category:hover {
-	background: yellow;
+[data-cat="art"]:hover {
+	background: #CC00CC;
+}
+
+[data-cat="food"]:hover {
+	background: #99FF33;
+}
+
+[data-cat="games"]:hover {
+	background: #FFFF33;
+}
+
+[data-cat="music"]:hover {
+	background: #FF6600;
+}
+
+[data-cat="technology"]:hover {
+	background: #00CCFF;
 }
 
 .category > h3 {
@@ -379,7 +381,6 @@ input.submit {
 	width: 85%;
 	margin-left: auto;
 	margin-right: auto;
-	
 }
 
 #donation-goal {
@@ -425,8 +426,46 @@ button#donate {
 }
 
 button#reward {
+	position: relative;
+	padding-left: 0px;
 	width: 100%;
+	h4 {
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: 50%;
+		transform: translateY(-100%);
+		opacity: 0;
+	}
 }
+
+//button#reward:hover {
+//	background: lightgreen;
+//	h2 {
+//		display: none;
+//	}
+//	p {
+//		display: none;
+//	}
+//}
+
+button#reward:hover {
+	background: lightgreen;
+	h2 {
+		opacity: 0.5;
+	}
+	p {
+		opacity: 0.5;
+	}
+	h4 {
+		opacity: 1;
+		
+	}
+}
+
+//button#reward:hover:before {
+//	content: "Select this reward";
+//}
 
 
 

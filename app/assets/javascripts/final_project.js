@@ -28,7 +28,7 @@ function moveProgressBar() {
     var getPercent = $progressWrap.data('progress-fraction');
     var getProgressWrapWidth = $progressWrap.width();
     var progressTotal = getPercent * getProgressWrapWidth;
-    var animationLength = 1500;
+    var animationLength = 1000;
 
     // on page load, animate percentage bar to data percentage length
     // .stop() used to prevent animation queueing

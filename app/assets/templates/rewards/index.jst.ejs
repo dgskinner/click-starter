@@ -3,6 +3,7 @@
   <% rewards.each(function (reward) { %>
 	  <button id="reward" class="btn btn-default">
 	      <h2><%= reward.escape('min_pledge') %></h2>
+		  <h4>Select this reward</h4>
 	      <p><%= reward.escape('description') %></p>
 	  </button>
   <% }); %>
