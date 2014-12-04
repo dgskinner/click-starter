@@ -36,7 +36,8 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 	changeCategoryPage: function (event) {
 		var cat = $(event.currentTarget).data('cat');
 		Backbone.history.navigate(
-			'#/projects/categories/' + cat
+			'#/projects/categories/' + cat,
+			{ trigger: true }
 		);
 	}
 });

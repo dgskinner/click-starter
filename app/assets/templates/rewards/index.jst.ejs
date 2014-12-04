@@ -2,7 +2,7 @@
 <% if (rewards.length > 0) { %>
   <% rewards.each(function (reward) { %>
 	  <button id="reward" class="btn btn-default">
-	      <h5>Pledge $<%=reward.escape('min_pledge')%> or more</h5>
+	      <h5>Pledge $<span id="min-pledge-amount"><%=reward.escape('min_pledge')%></span> or more</h5>
 		  <h4>Select this reward</h4>
 	      <p><%= reward.escape('description') %></p>
 	  </button>

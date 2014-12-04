@@ -65,11 +65,11 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 	},
 	
 	showDonationForm: function (event) {
-		// $('body').addClass('form-showing');
+		debugger
 		if (this.model.ownedByCurrentUser) {
 			// tell user why nothing happened
 		} else {
-			var amount = $(event.currentTarget).find('h2').text();
+			var amount = $(event.currentTarget).find('h5 #min-pledge-amount').text();
 			if (this.$el.find('#donation-form').length === 0) {
 				var donateForm = new FinalProject.Views.DonationForm({
 					model: this.model,
