@@ -8,7 +8,7 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 	},
 
 	render: function () {
-		var content = this.template();
+		var content = this.template({category: this.category});
 		this.$el.html(content);
 		
 		var projectsInCategory = this.collection.where({category: this.category})
@@ -27,6 +27,7 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 	},
 	
 	showProject: function (event) {
-		debugger
+		var projectId = $(event.currentTarget).data('project-id');
+		Backbone.history.navigate('#/projects/' + projectId);
 	}
 });

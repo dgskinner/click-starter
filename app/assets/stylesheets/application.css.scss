@@ -130,10 +130,17 @@ a.carousel-control {
 
 
 
-// projects index
+// projects index/category
 
 #main {
 	position: relative;
+}
+
+#category-index-title {
+	text-align: center;
+	font-size: 500%;
+	margin-top: 100px;
+	margin-bottom: 60px;
 }
 
 #projects-index-title {
@@ -218,8 +225,6 @@ a.carousel-control {
 .info-under-progress-bar .days-to-go {
 	padding-right: 0;
 }
-
-
 
 
 // project form 
@@ -378,7 +383,7 @@ input.submit {
 .progress-wrap.show {
   background: lightgreen;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   overflow: hidden;
   position: relative;
   .progress-bar {
@@ -389,13 +394,17 @@ input.submit {
   }
 }
 
+#under-progress-bar {
+	font-size: 120%;
+}
+
 #number-days {
 	font-size: 400%;
 	padding-top: 10px;
 }
 
 #days-to-go {
-	font-size: 150%;
+	font-size: 120%;
 	margin-top: -10px;
 }
 

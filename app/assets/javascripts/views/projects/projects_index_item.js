@@ -11,6 +11,7 @@ FinalProject.Views.ProjectsIndexItem = Backbone.View.extend({
 			daysLeft: this.daysLeft()
 		});
 		this.$el.html(content).addClass('project-item');
+		this.$el.data('project-id', this.model.id);
 		window.moveProgressBar();
 		return this;
 	},

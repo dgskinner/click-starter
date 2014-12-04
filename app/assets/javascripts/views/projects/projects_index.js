@@ -21,6 +21,15 @@ FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 		});
 		return this;
 	},
+	
+	events: {
+		'click .project-item': 'showProject' 
+	},
+	
+	showProject: function (event) {
+		var projectId = $(event.currentTarget).data('project-id');
+		Backbone.history.navigate('#/projects/' + projectId);
+	}
 });
 
 
