@@ -502,8 +502,6 @@ button#reward {
 		opacity: 0;
 	}
 	p {
-//		display: block;
-//		word-wrap: break-word;
 		white-space: normal;
 		text-align: left;
 		padding-left: 20px;
@@ -528,30 +526,69 @@ button#reward:hover {
 
 // donation form
 
-#donation-form {
+.pop-up-form {
 	position: fixed;
 	font-size: 200%;
-//	padding: 1000px;
-	padding-top: 200px;
-//	width: 100%;
-//	height: 100%;
+	padding: 2000px;
+	padding-top: 150px;
 	left: 50%;
 	top: 0%;
 	transform: translateX(-50%);
-	background-color: rgba(248,248,248,0.9);
-	#donate-title {
-		font-size: 300%;
+	background-color: rgba(248,248,248,0.90);
+	
+	#donation-form {
+		position: relative;
+		
+		#donate-title {
+			font-size: 300%;
+		}
+		label {
+			margin-top: 10px;
+			white-space: nowrap;
+		}
+		input#amount {
+			width: 94%;
+			position: absolute;
+		}
+		.btn {
+			position: absolute;
+			margin-top: 30px;
+			font-size: 100%;
+			left: 15px;
+		}
+		.btn.cancel {
+			left: 160px;
+		}
 	}
-	input#amount {
-		width: 58%;
-	}
-	.btn {
-		margin-top: 20px;
-		margin-right: 25px;
-		margin-left: 10px;
-		font-size: 100%;
+	
+	#reward-form {
+		position: relative;
+		
+		#add-reward-title {
+			text-align: center;
+			font-size: 200%;
+		}
+		label {
+			margin-top: 20px;
+		}
+		input#min-pledge {
+			position: absolute;
+			width: 89%;
+		}
+		.btn {
+			position: absolute;
+			margin-top: 20px;
+			font-size: 100%;
+			left: 10px;
+		}
+		.btn.cancel {
+			left: 235px;
+		}
 	}
 }
 
+.pop-up-form.new-reward {
+	padding-top: 90px;
+}
 
 
