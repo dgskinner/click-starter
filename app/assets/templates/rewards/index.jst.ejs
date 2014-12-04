@@ -1,10 +1,11 @@
 <!-- <div id="rewards-index"> -->
-  <h1>Rewards:</h1>	
+<% if (rewards.length > 0) { %>
   <% rewards.each(function (reward) { %>
 	  <button id="reward" class="btn btn-default">
-	      <h2><%= reward.escape('min_pledge') %></h2>
+	      <h5>Pledge $<%=reward.escape('min_pledge')%> or more</h5>
 		  <h4>Select this reward</h4>
 	      <p><%= reward.escape('description') %></p>
 	  </button>
   <% }); %>
+<% } %>
 <!-- </div> -->

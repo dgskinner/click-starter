@@ -17,9 +17,8 @@
  *= require_self
  */
 
-//@import "bootstrap";
+@import "bootstrap";
 // comment this out to use a theme
-//@import 'slick';
 
 
 body {
@@ -31,7 +30,7 @@ body {
 }
 
 .nav {
-	background: lightgreen;
+	background: #33DD33;
 }
 
 .nav li a{
@@ -210,7 +209,7 @@ a.carousel-control {
 	border-radius: 0px;
 }
 .progress-wrap.index {
-  background: lightgreen;
+  background: #33DD33;
   margin-top: 20px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -317,7 +316,7 @@ label {
 }
 
 input.submit {
-	color: lightgreen;
+	color: #33DD33;
 }
 
 #submit-project {
@@ -393,7 +392,7 @@ input.submit {
   border-radius: 0px;
 }
 .progress-wrap.show {
-  background: lightgreen;
+  background: #33DD33;
   margin-top: 20px;
   margin-bottom: 10px;
   overflow: hidden;
@@ -422,13 +421,23 @@ input.submit {
 
 button#donate {
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
+	background: #33DD33;
+	color: white;
 }
 
 button#reward {
 	position: relative;
+	background: #F8F8F8;
+	border: solid lightgray 1px;
+	color: black;
 	padding-left: 0px;
 	width: 100%;
+	h5 {
+		text-align: left;
+		padding-left: 20px;
+		font-weight: bold;
+	}
 	h4 {
 		position: absolute;
 		display: block;
@@ -437,35 +446,29 @@ button#reward {
 		transform: translateY(-100%);
 		opacity: 0;
 	}
+	p {
+//		display: block;
+//		word-wrap: break-word;
+		white-space: normal;
+		text-align: left;
+		padding-left: 20px;
+		padding-right: 10px;
+	}
 }
 
-//button#reward:hover {
-//	background: lightgreen;
-//	h2 {
-//		display: none;
-//	}
-//	p {
-//		display: none;
-//	}
-//}
-
 button#reward:hover {
-	background: lightgreen;
-	h2 {
-		opacity: 0.5;
+	background: #33DD33;
+	h5 {
+		opacity: 0.3;
 	}
 	p {
-		opacity: 0.5;
+		opacity: 0.3;
 	}
 	h4 {
 		opacity: 1;
-		
+		color: white;
 	}
 }
-
-//button#reward:hover:before {
-//	content: "Select this reward";
-//}
 
 
 
