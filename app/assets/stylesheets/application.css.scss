@@ -43,14 +43,6 @@ body {
 	font-size: 125%;
 }
 
-#logo {
-
-}
-
-#discover {
-
-}
-
 .dropdown-menu {
 	width: 300px;
 	
@@ -81,7 +73,7 @@ body {
 //}
 
 .carousel-inner .item {
-	height: 600px;
+	width: 100%;
 }
 
 a.carousel-control {
@@ -128,6 +120,12 @@ a.carousel-control {
 	margin-left: 10%;
 	height: 60%;
 	border-radius: 10px;
+	background: white;
+	color: lightgray;
+}
+
+.category:hover {
+	background: yellow;
 }
 
 .category > h3 {
