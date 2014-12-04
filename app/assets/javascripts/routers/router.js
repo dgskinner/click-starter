@@ -7,8 +7,9 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	routes: {
 		'': 'home',
 		'projects': 'projectsIndex',
-		'projects/new': 'projectNew',
+		'projects/form': 'projectNew',
 		'projects/:id': 'projectShow',
+		'projects/:id/edit': 'projectEdit',
 		'projects/categories/:cat': 'projectCat'
 	},
 	
@@ -45,6 +46,14 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 			collection: this.projects
 		});
 		this._swapView(formView);
+	},
+	
+	projectEdit: function (id) {
+		var project = this.projects.getOrFetch(id);
+		var editView = new FinalProject.Views.ProjectForm({
+			model: project
+		});
+		this._swapView(editView);
 	},
 	
 	projectCat: function (cat) {

@@ -42,7 +42,7 @@
 	
     <div class="form-group">
 		<label for='image-url'>Please enter the url of an image associated with your project:</label><br>
-		<input type='text' name='image_url' id='image-url'><br><br><br>
+		<input type='text' name='image_url' id='image-url' value='<%=project.escape('image_url')%>'><br><br><br>
     </div>
 
   	<div class="form-group fundraising">
@@ -55,7 +55,7 @@
 
 		<div id="deadline">
 		<label for='deadline'>Please set your fundraising deadline:</label><br>
-		<input type='date' min='<%=today%>' name='deadline' id='deadline'><br>
+		<input type='date' min='<%=today%>' name='deadline' id='deadline' value='<%=project.escape('deadline')%>'><br>
 		</div>
 	</div>
 
