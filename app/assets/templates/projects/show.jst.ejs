@@ -8,34 +8,32 @@
 			<img src='<%=project.escape('image_url')%>'></img>
 		</div>	
 
-		<div id="description">
-			<h4><%= project.escape('description') %></h4>
+		<div id="project-desc">
+			<pre><%= project.escape('description') %></pre>
 		</div>
 	</div>
 
 
 	<div class='project-info right-col'>
+		<div class="progress-wrap progress show" data-progress-fraction="<%=progressFraction%>">
+		  <div class="progress-bar progress show"></div>
+		</div>
+		<div class="smallish-text-underneath">
+			$<%=project.donationTotal%> pledged so far
+		</div>
+		
 	  <div id="donation-goal">
-		  Goal: $<%=project.escape('goal')%>
+		  <div class="larger-text-top">$<%=project.escape('goal')%></div>
+		  <div class="smallish-text-underneath">goal</div>  
 	  </div>
-	  
-	<div class="progress-wrap progress show" data-progress-fraction="<%=progressFraction%>">
-	  <div class="progress-bar progress show"></div>
-	</div>
 	
-	<div id="under-progress-bar">
-		$<%=project.donationTotal%> pledged so far
-	</div>
-
 	  <!-- <div id="location"> -->
 	    <!-- <h4><%= project.escape('location') %></h4> -->
 	  <!-- </div> -->
   
-
-  
 	  <div id="deadline">
-		<div id="number-days"><%= daysLeft %></div>
-		<div id="days-to-go">days to go</div>  
+		<div class="larger-text-top"><%= daysLeft %></div>
+		<div class="smallish-text-underneath">days to go</div>  
 	  </div> 
   
 	  <button id="donate" class="btn btn-default">Back This Project!</button>

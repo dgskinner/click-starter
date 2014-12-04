@@ -1,8 +1,12 @@
-<h2>Sign Up</h2>
+<div class='sign-in-up-title'>
+	Sign Up<br>
+</div>
 
-<%= render "layouts/errors" %>
+<div class='sign-in-up-errors'>
+	<%= render "layouts/errors" %>
+</div>
 
-<form class="form-horizontal" action="<%= users_url %>" method="post">
+<form class="form-horizontal sign-in-up-form" action="<%= users_url %>" method="post">
 	
   <%= auth_token_input %>
   

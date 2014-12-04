@@ -14,21 +14,29 @@
 		  
 		<li id="my-projects">
 			<h4>My Projects:</h4>
-			<% current_user.projects.each do |project| %>
-				<a href='#/projects/<%=project.id%>'>
-					<%= project.name %>
-				</a>
+			<% if current_user.backed_projects.length > 0 %>
+				<% current_user.projects.each do |project| %>
+					<a href='#/projects/<%=project.id%>'>
+						<%= project.name %>
+					</a>
+				<% end %>
+			<% else %>
+				<h5>(none yet)</h5>
 			<% end %>
 		</li>
 		</br>
 		
 		<li id="backed-projects">
 			<h4>Backed Projects:</h4>
-			<% current_user.backed_projects.each do |project| %>
-				<a href='#/projects/<%=project.id%>'>
-					<%= project.name %>
-				</a>
-			<% end %>
+			<% if current_user.backed_projects.length > 0 %>
+				<% current_user.backed_projects.each do |project| %>
+					<a href='#/projects/<%=project.id%>'>
+						<%= project.name %>
+					</a>
+				<% end %>
+			<% else %>
+				<h5>(none yet)</h5>
+			<% end %>	
 		</li>
 		<br>
 		

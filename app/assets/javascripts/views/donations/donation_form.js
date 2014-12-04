@@ -26,23 +26,10 @@ FinalProject.Views.DonationForm = Backbone.View.extend({
 			amount: amount,
 			project_id: projectId
 		});
-		donation.save();
+		debugger
+		this.model.donations().create(donation);
+		// donation.save();
 		this.$el.remove();
-		
-		// var attrs = $(event.target).serializeJSON();
-		// var donation = new FinalProject.Models.Donation(attrs);
-		// var donations = new FinalProject.Collections.Donations();
-		// donations.fetch();
-		// donations.create(donation, {
-		// 	success: function () {
-		// 		console.log('SUCCESS');
-		// 	},
-		// 	error: function () {
-		// 		console.log('DONATIONS COLLECTION: ' + donations.length);
-		// 		console.log('PROJECT_ID: ' + projectId);
-		// 		debugger
-		// 	}
-		// });
 	},
 
 	cancelDonation: function (event) {
