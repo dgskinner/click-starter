@@ -27,9 +27,10 @@ FinalProject.Views.DonationForm = Backbone.View.extend({
 			project_id: projectId
 		});
 		debugger
-		this.model.donations().create(donation);
-		// donation.save();
+		donation.save();
 		this.$el.remove();
+		// this is a little bit hacky:
+		Backbone.history.navigate('#/projects/' + projectId, { trigger: true });
 	},
 
 	cancelDonation: function (event) {

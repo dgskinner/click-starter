@@ -10,15 +10,6 @@ FinalProject.Models.Project = Backbone.Model.extend({
 		return this._rewards;
 	},
 	
-	donations: function () {
-		if (!this._donations) { 	// Why do we need this if statement?
-			this.donations = new FinalProject.Collections.Donations([], {
-				project: this
-			});
-		}
-		return this._rewards;
-	},
-	
 	parse: function (response) {
 	    if (response.rewards) {
 	      this.rewards().set(response.rewards, { parse: true });

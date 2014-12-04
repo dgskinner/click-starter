@@ -3,8 +3,8 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 
 	initialize: function (options) {
 		this.category = options.category;
-		this.listenTo(this.collection,
-			'add change:title change:description remove reset', this.render);
+		this.listenTo(this.collection, 'add', this.render);
+		// window.moveProgressBar();
 	},
 
 	render: function () {
@@ -24,11 +24,19 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 	},
 	
 	events: {
-		'click .project-item': 'showProject' 
+		'click .project-item': 'showProject',
+		'click .change-cat': 'changeCategoryPage' 
 	},
 	
 	showProject: function (event) {
 		var projectId = $(event.currentTarget).data('project-id');
 		Backbone.history.navigate('#/projects/' + projectId);
+	},
+	
+	changeCategoryPage: function (event) {
+		var cat = $(event.currentTarget).data('cat');
+		Backbone.history.navigate(
+			'#/projects/categories/' + cat
+		);
 	}
 });

@@ -173,22 +173,28 @@ a.carousel-control {
 
 #category-index-title {
 	text-align: center;
-	font-size: 500%;
+	font-size: 300%;
 	margin-top: 100px;
-	margin-bottom: 60px;
 }
 
 #row-of-categories {
 	position: relative;
 	padding: 5%;
+	padding-bottom: 10%;
 	div {
 		position: inline-block;
 		width: 20%;
 		float: left;
-		
+		font-size: 125%;
+		div {
+			width: 100%;
+			text-align: center;
+		}
 	}
 	.selected-cat {
-		border: solid black 1px;
+		border: solid black 2px;
+		border-radius: 3px;
+		transform: translateY(-2px);
 	}
 }
 
