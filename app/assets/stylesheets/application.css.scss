@@ -178,6 +178,20 @@ a.carousel-control {
 	margin-bottom: 60px;
 }
 
+#row-of-categories {
+	position: relative;
+	padding: 5%;
+	div {
+		position: inline-block;
+		width: 20%;
+		float: left;
+		
+	}
+	.selected-cat {
+		border: solid black 1px;
+	}
+}
+
 #projects-index-title {
 	text-align: center;
 	font-size: 500%;
@@ -490,10 +504,10 @@ button#reward {
 button#reward:hover {
 	background: #33DD33;
 	h5 {
-		opacity: 0.3;
+		opacity: 0.2;
 	}
 	p {
-		opacity: 0.3;
+		opacity: 0.2;
 	}
 	h4 {
 		opacity: 1;

@@ -10,6 +10,7 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 	render: function () {
 		var content = this.template({category: this.category});
 		this.$el.html(content);
+		this.$el.find('[data-cat=' + this.category + ']').addClass('selected-cat');
 		
 		var projectsInCategory = this.collection.where({category: this.category})
 		var that = this;
