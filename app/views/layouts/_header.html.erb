@@ -13,37 +13,29 @@
 	  <ul class="dropdown-menu" role="menu">
 		  
 		<li id="my-projects">
-			My Projects
-			<ul>
-				<% current_user.projects.each do |project| %>
-					<li>
-						<a href='#/projects/<%=project.id%>'>
-							<%= project.name %>
-						</a>
-					</li>
-				<% end %>
-			</ul>
+			<h4>My Projects:</h4>
+			<% current_user.projects.each do |project| %>
+				<a href='#/projects/<%=project.id%>'>
+					<%= project.name %>
+				</a>
+			<% end %>
 		</li>
 		</br>
 		
 		<li id="backed-projects">
-			Backed Projects
-			<ul>
-				<% current_user.backed_projects.each do |project| %>
-					<li>
-						<a href='#/projects/<%=project.id%>'>
-							<%= project.name %>
-						</a>
-					</li>
-				<% end %>
-			</ul>
+			<h4>Backed Projects:</h4>
+			<% current_user.backed_projects.each do |project| %>
+				<a href='#/projects/<%=project.id%>'>
+					<%= project.name %>
+				</a>
+			<% end %>
 		</li>
 		<br>
 		
 		<li class="divider"></li>
 		
   	    <li id="sign-out">
-  	      <%= button_to "Sign Out", session_url, :method => :delete %>
+  	      <%= button_to "Sign Out", session_url, :method => :delete, class: "btn btn-default" %>
         </li>
 		
 	  </ul>

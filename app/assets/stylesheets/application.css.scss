@@ -53,6 +53,19 @@ body {
 
 .dropdown-menu {
 	width: 300px;
+	
+	h4 {
+		padding-left: 12px;
+	}
+	#sign-out {
+		display: inline-block;
+		padding-left: 25px;
+		.btn {
+			width: 100px;
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+	}
 }
 
 
