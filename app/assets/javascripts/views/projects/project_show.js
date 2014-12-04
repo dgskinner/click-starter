@@ -37,11 +37,12 @@ FinalProject.Views.ProjectShow = Backbone.View.extend({
 		var addRewardButton = new FinalProject.Views.AddRewardButton();
 		var editProjectLink = new FinalProject.Views.EditProjectLink();
 		
-		var $leftColumn = this.$el.find('.project-info.left');
+		var $leftColumn = this.$el.find('.project-info.left-col');
 		$leftColumn.prepend(addRewardButton.render().$el);
 		$leftColumn.children().first().addClass('edit');
 		$leftColumn.prepend(editProjectLink.render().$el);
 		$leftColumn.children().first().addClass('edit');
+		debugger
 	},
 	
 	showRewardForm: function () {
