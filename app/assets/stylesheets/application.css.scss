@@ -35,7 +35,8 @@ body {
 }
 
 .nav {
-	background: #33DD33;
+//	background: #33DD33;
+background: rgba(51, 221, 51, 0.75);
 }
 
 .nav li a{
@@ -141,7 +142,7 @@ a.carousel-control {
 }
 
 [data-cat="food"]:hover {
-	background: #99FF33;
+	background: #33DD33;
 }
 
 [data-cat="games"]:hover {
