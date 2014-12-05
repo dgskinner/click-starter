@@ -24,6 +24,9 @@
 body {
 	background: #F8F8F8;
 	font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin:0;
+	padding:0;
+	height:100%;
 }
 
 //body.form-showing {
@@ -32,6 +35,9 @@ body {
 
 .container {
 	position: relative;
+	min-height: 100%;
+	padding:10px;
+	padding-bottom:80px;   /* Height of the footer */
 }
 
 .nav {
@@ -69,6 +75,32 @@ background: rgba(51, 221, 51, 0.75);
 }
 
 
+// footer 
+
+#footer {
+	position: relative;
+	background: black;
+	color: #33DD33;
+	width: 100%;
+	height:80px;
+	bottom:0;
+	left:0;
+	div {
+		display: inline-block;
+		padding-top: 15px;
+		padding-left: 50px;
+	}
+}
+
+#footer #categories {
+	float: right;
+	padding-right: 50px;
+}
+
+#footer #foot-links {
+	padding-left: 0px;
+}
+
 // sign in/up
 
 .sign-in-up-title {
@@ -90,6 +122,9 @@ background: rgba(51, 221, 51, 0.75);
 
 
 // home page
+.carousel-inner {
+	margin-top: -90px; /*height of footer plus 10 (padding) */
+}
 
 .carousel-inner .item img {
 	width: 100%;
@@ -125,7 +160,7 @@ a.carousel-control {
 }
 
 .categories.second-row {
-	margin-bottom: 150px;
+	margin-bottom: 50px;
 }
 
 .category {

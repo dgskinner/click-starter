@@ -20,7 +20,8 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 			this._currentView.remove();
 		}
 		this._currentView = homeView;
-		$('body').append(homeView.render().$el);
+		// $('body').append(homeView.render().$el);
+		(homeView.render().$el).insertBefore($('#footer'));
 	},
 	
 	projectsIndex: function () {
