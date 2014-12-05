@@ -20,6 +20,7 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 			});
 			that.$el.append(itemView.render().$el);
 		});
+		window.moveProgressBar();
 		return this;
 	},
 	

@@ -23,8 +23,3 @@ FinalProject.Views.ProjectsIndexItem = Backbone.View.extend({
 		return milliSec / 86400000;
 	},
 });
-
-// SHOULD NOT HAVE TO DO THIS!
-setTimeout(function(){ 
-	window.moveProgressBar(); 
-}, 1000);

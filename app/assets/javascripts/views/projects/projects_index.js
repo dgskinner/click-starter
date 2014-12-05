@@ -7,9 +7,6 @@ FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 	},
 	
 	render: function () {
-		// var content = this.template({projects: this.collection});
-		// this.$el.html(content);
-		// return this;
 		var content = this.template();
 		this.$el.html(content);
 		var that = this;
@@ -19,6 +16,7 @@ FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 			});
 			that.$el.append(itemView.render().$el);
 		});
+		window.moveProgressBar();
 		return this;
 	},
 	
