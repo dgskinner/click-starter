@@ -1,11 +1,7 @@
 module Api
   class ProjectsController < ApiController
     def index
-      # @projects = Project.all
-      @projects = []
-      (3..9).each do |num|
-        @projects << Project.find(num)
-      end
+      @projects = Project.all
       render :index
     end
     

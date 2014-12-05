@@ -10,7 +10,8 @@ FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 		var content = this.template();
 		this.$el.html(content);
 		var that = this;
-		this.collection.each(function (project) {
+		// first 7 are the staff picks
+		this.collection.first(7).forEach(function (project) {
 			var itemView = new FinalProject.Views.ProjectsIndexItem({
 				model: project
 			});
