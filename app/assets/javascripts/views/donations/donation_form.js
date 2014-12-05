@@ -26,9 +26,17 @@ FinalProject.Views.DonationForm = Backbone.View.extend({
 			amount: amount,
 			project_id: projectId
 		});
-		donation.save();
-		this.$el.remove();
-		Backbone.history.navigate('#/projects/' + projectId, { trigger: true });
+		var that = this;
+		$('.spinner').removeClass('hidden');
+		window.setTimeout( function () {
+			donation.save();
+			$('.spinner').addClass('hidden');
+			$('#thank-you').removeClass('hidden');
+		}, 2000);
+		window.setTimeout( function () {
+			that.$el.remove();
+			Backbone.history.navigate('#/projects/' + projectId, { trigger: true });
+		}, 3000);
 	},
 
 	cancelDonation: function (event) {
