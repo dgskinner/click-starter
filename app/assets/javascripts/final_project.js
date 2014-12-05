@@ -17,6 +17,7 @@ window.FinalProject = {
 
 
 // Progress bar:
+
 // on browser resize...
 $(window).resize(function() {
     moveProgressBar();
@@ -36,16 +37,3 @@ function moveProgressBar() {
         left: progressTotal
     }, animationLength);
 }
-
-// function moveProgressBar() {
-//     var getPercent = ($('.progress-wrap').last().data('progress-fraction'));
-//     var getProgressWrapWidth = $('.progress-wrap').width();
-//     var progressTotal = getPercent * getProgressWrapWidth;
-//     var animationLength = 1500;
-//
-//     // on page load, animate percentage bar to data percentage length
-//     // .stop() used to prevent animation queueing
-//     $('.progress-bar').stop().animate({
-//         left: progressTotal
-//     }, animationLength);
-// }

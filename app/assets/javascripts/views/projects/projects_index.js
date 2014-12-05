@@ -3,7 +3,7 @@ FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 	
 	initialize: function () {
 		this.listenTo(this.collection,
-			'add change:title change:description remove reset', this.render);
+			'add sync', this.render);
 	},
 	
 	render: function () {

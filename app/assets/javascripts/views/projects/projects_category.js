@@ -3,8 +3,7 @@ FinalProject.Views.ProjectsCategory = Backbone.View.extend({
 
 	initialize: function (options) {
 		this.category = options.category;
-		this.listenTo(this.collection, 'add', this.render);
-		// window.moveProgressBar();
+		this.listenTo(this.collection, 'add sync', this.render);
 	},
 
 	render: function () {
