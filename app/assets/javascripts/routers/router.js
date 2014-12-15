@@ -15,7 +15,7 @@ FinalProject.Routers.Router = Backbone.Router.extend({
 	
 	home: function () {
 		var homeView = new FinalProject.Views.Home();
-		// this._swapView(homeView);
+		// same idea as: this._swapView(homeView); 
 		if (this._currentView) {
 			this._currentView.remove();
 		}

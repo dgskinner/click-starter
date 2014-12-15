@@ -2,7 +2,7 @@ FinalProject.Models.Project = Backbone.Model.extend({
 	urlRoot: '/api/projects',
 	
 	rewards: function () {
-		if (!this._rewards) { 	// Why do we need this if statement?
+		if (!this._rewards) { 
 			this._rewards = new FinalProject.Collections.Rewards([], {
 				project: this
 			});
@@ -21,7 +21,6 @@ FinalProject.Models.Project = Backbone.Model.extend({
 	    }
 		this.ownedByCurrentUser = response.is_owner;
 		this.donationTotal = response.donation_total;
-		// why do we return this?
 		return response;
 	}
 });

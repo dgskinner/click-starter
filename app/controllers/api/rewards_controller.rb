@@ -1,7 +1,6 @@
 module Api
   class RewardsController < ApplicationController  
     def create 
-      # @reward = Reward.new(reward_params)
       @reward = current_project.rewards.new(reward_params)
       if @reward.save
         render json: @reward
@@ -11,16 +10,12 @@ module Api
     end
   
     def index
-      # @rewards = Reward.where(project_id: params[:project_id])
       @rewards = Reward.all
       render json: @rewards
     end
   
     private
     def current_project
-      # @project = Project.find(params[:id])
-      
-      # I don't unserstand this:
       @project = Project.find(params[:reward][:project_id])
     end
     

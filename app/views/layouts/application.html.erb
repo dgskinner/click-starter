@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ClickStarter</title>
-  <%= stylesheet_link_tag    'application', media: 'all'%>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-  
-  
-  <!-- slick: -->
-  <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/> -->
+	<title>ClickStarter</title>
+	<%= stylesheet_link_tag    'application', media: 'all'%>
+	<%= javascript_include_tag 'application' %>
+	<%= csrf_meta_tags %>
 
 </head>
 <body>
 
-			<%= render partial: "layouts/header" %>
+	<%= render partial: "layouts/header" %>
+
+	<div class="container">  
+	  <%= yield %>
+	</div>
 	
-			<div class="container">  
-			  <%= yield %>
-			</div>
-			
-			<%= render partial: "layouts/footer" %>
+	<%= render partial: "layouts/footer" %>
 </body>
 </html>
 

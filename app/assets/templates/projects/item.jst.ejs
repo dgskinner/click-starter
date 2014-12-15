@@ -1,11 +1,9 @@
 <img src='<%=project.escape("image_url")%>'>
 
 <div class="index-project-info">
-	<!-- <a href='#/projects/<%= project.id %>'> -->
-	  <div class='project-name'>        
-	    <%= project.escape('name') %>
-	  </div>
-	<!-- </a> -->
+	<div class='project-name'>        
+	  <%= project.escape('name') %>
+	</div>
 	<div class='project-description'> 
 	  <% var desc = project.escape('description') %>  
 	  <% if (desc.length < 250) { %>     

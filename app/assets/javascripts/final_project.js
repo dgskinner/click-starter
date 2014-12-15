@@ -9,11 +9,7 @@ window.FinalProject = {
 	}
 };
 
-
-// $(document).ready(function(){
-// 	FinalProject.initialize();
-// });
-// instead, called FinalProject.initialize in root.html.erb
+// FinalProject.initialize in root.html.erb
 
 
 // Progress bar:
@@ -23,7 +19,6 @@ $(window).resize(function() {
     moveProgressBar();
 });
 
-// SIGNATURE PROGRESS
 function moveProgressBar() {
 	var $progressWrap = $('.progress-wrap').last();
     var getPercent = $progressWrap.data('progress-fraction');
@@ -31,7 +26,6 @@ function moveProgressBar() {
     var progressTotal = getPercent * getProgressWrapWidth;
     var animationLength = 1000;
 
-    // on page load, animate percentage bar to data percentage length
     // .stop() used to prevent animation queueing
     $progressWrap.find('.progress-bar').stop().animate({
         left: progressTotal
