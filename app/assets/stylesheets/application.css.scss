@@ -18,7 +18,6 @@
  */
 
 @import "bootstrap";
-// comment this^ out to use a theme
 
 .hidden {
 	display: none;
@@ -32,15 +31,11 @@ body {
 	height:100%;
 }
 
-//body.form-showing {
-//	opacity: 0.2;
-//}
-
 .container {
 	position: relative;
 	min-height: 100%;
 	padding:10px;
-	padding-bottom:80px;   /* Height of the footer */
+	padding-bottom: 80px;   // Height of the footer
 }
 
 .nav {
@@ -130,12 +125,14 @@ background: rgba(51, 221, 51, 0.75);
 
 // home page
 .carousel-inner {
-	margin-top: -90px; /*height of footer plus 10 (padding) */
+	margin-top: -90px; // height of footer plus 10 (padding)
 	height: 600px;
 }
 
-.carousel-inner .item img {
-	width: 100%;
+.carousel-inner .item {
+	img {
+		width: 100%;
+	}
 }
 
 a.carousel-control {
@@ -144,7 +141,7 @@ a.carousel-control {
 
 .carousel-caption {
 	font-size: 250%;
-	padding-bottom: 230px;
+	top: 450px;
 }
 
 #about-clickstarter {
@@ -290,8 +287,6 @@ a.carousel-control {
 	width: 40%;
 	top: 20%;
 }
-
-// repeated code between here and show view progress. Refactor.
 
 .progress.index {
 	position: absolute;
