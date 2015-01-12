@@ -2,3 +2,4 @@
 
 This is a crowdfunding app inspired by Kickstarter. 
 Guest users can browse projects but users must sign in to back projects or create a new project.
+www.clickstarter.us
