@@ -1,47 +1,5 @@
-== README
+== ClickStarter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-
-
-
-    <div class="slick-carousel">
-        <div><img src="http://quantumleapalchemy.com/wp-content/uploads/2014/10/smaller.jpg" alt="Colorful drawing"></div>
-        <div><img src="http://foundry-wp.com/wp-content/uploads/2012/06/IMG_0050_small.jpg" alt="Pizza restaurant"></div>
-        <div><img src="http://inspiiral.com/wp-content/uploads/2014/11/women-in-technology.jpg" alt="Cool Technology"></div>
-    </div>
-
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migr"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.slick-carousel').slick();
-        });
-    </script>
+This is a crowdfunding app inspired by Kickstarter. 
+Guest users can browse projects but users must sign in to back projects or create a new project.
+www.clickstarter.us
