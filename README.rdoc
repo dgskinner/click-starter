@@ -1,5 +1,14 @@
 == ClickStarter
 
-This is a crowdfunding app inspired by Kickstarter. 
-Guest users can browse projects but users must sign in to back projects or create a new project.
-www.clickstarter.us
+This is a crowdfunding app inspired by Kickstarter (live: www.clickstarter.us)
+
+
+Built using Ruby on Rails on the back end and JavaScript/jQuery/Backbone.js on the front end. Some key features include:
+* Overrides password= method in the user model and uses BCrypt to store encrypted passwords in the database 
+* Uses Backbone composite view pattern to display each project index item on ‘Staff Picks’ page
+* Uses jQuery animation to dynamically load donation progress bars on project index and show pages
+* Composite view pattern used to display rewards on project show page
+* Uses CSS opacity property to render slightly transparent donation form
+* Upon selecting a reward, donation form is rendered with the appropriate donation default value 
+* Donation model level validation prevents donation from saving successfully unless user is signed in
+* After successful donation, uses Backbone to re-render the project show page with updated donation progress 
