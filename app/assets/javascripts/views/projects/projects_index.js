@@ -11,7 +11,7 @@ FinalProject.Views.ProjectsIndex = Backbone.View.extend({
 		this.$el.html(content);
 		var that = this;
 
-		this.collection.first(7).forEach(function (project) {
+		this.collection.sortBy('id').slice(0, 5).forEach(function (project) {
 			var itemView = new FinalProject.Views.ProjectsIndexItem({
 				model: project
 			});
